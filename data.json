@@ -1,0 +1,1922 @@
+[
+    {
+        "requirement": "The CSCI shall check that no responsibility which \"control\" attribute is true (i.e. control responsibility) is assigned to a System configuration unit.",
+        "output_path": "hlt/dpr_check_hlt_NoControlResponsibilitiesDefinedInSystemConfigurationUnitsCheck.feature",
+        "name": "NoControlResponsibilitiesDefinedInSystemConfigurationUnitsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each OE, that the role name linked to the responsibility is one of the compatible roles names of the OE responsibility.",
+        "output_path": "hlt/dpr_check_hlt_OERoleIncludedInOEResponsibilityRolesCheck.feature",
+        "name": "OERoleIncludedInOEResponsibilityRolesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there are not two OE which link the same role to the same responsibility (each combination of role and responsibility shall be unique).",
+        "output_path": "hlt/dpr_check_hlt_EveryOEHasAUniquePairOfRoleAndRespCheck_ATSUsCol.feature",
+        "name": "EveryOEHasAUniquePairOfRoleAndRespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there are not two OE which link the same role to the same responsibility (each combination of role and responsibility shall be unique).",
+        "output_path": "hlt/dpr_check_hlt_EveryOEHasAUniquePairOfRoleAndRespCheck_SystemInstancesCol.feature",
+        "name": "EveryOEHasAUniquePairOfRoleAndRespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility is linked to at least one OE",
+        "output_path": "hlt/dpr_check_hlt_EachResponsibilityIsAssociatedToAtLeastOneOEATSUsCheck.feature",
+        "name": "EachResponsibilityIsAssociatedToAtLeastOneOECheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility is linked to at least one OE",
+        "output_path": "hlt/dpr_check_hlt_EachResponsibilityIsAssociatedToAtLeastOneOESystemInstancesCheck.feature",
+        "name": "EachResponsibilityIsAssociatedToAtLeastOneOECheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility which \"control\" attribute is true (i.e. control responsibility) is linked to one and only one OE which associated role has the tactical and control attributes assigned to true (i.e. tactical control role).",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneOEWithTacticalControlRolePerControlResponsibilityCheck.feature",
+        "name": "ExactlyOneOEWithTacticalControlRolePerControlResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility which \"control\" attribute is true (i.e. control responsibility) is linked to one and only one qualification area.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneQAPerControlResponsibilityCheck.feature",
+        "name": "ExactlyOneQAPerControlResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility which \"control\" attribute is false (i.e. non control responsibility) is linked to none or else one and only one mapping partition.",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneMappingPartitionPerNonControlResponsibilityCheck_ATSUsCol.feature",
+        "name": "AtMostOneMappingPartitionPerNonControlResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each responsibility which \"control\" attribute is false (i.e. non control responsibility) is linked to none or else one and only one mapping partition.",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneMappingPartitionPerNonControlResponsibilityCheck_SystemInstancesCol.feature",
+        "name": "AtMostOneMappingPartitionPerNonControlResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the same OE and the same LP are referenced only once in a predefined mapping instance.",
+        "output_path": "hlt/dpr_check_hlt_EachOEAndEachLPIsReferencedAtMostOnceInTheSamePreDefMappingCheck.feature",
+        "name": "EachOEAndEachLPIsReferencedAtMostOnceInTheSamePreDefMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each control volume is linked to at least one control responsibility rule.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneControlRespRulePerControlVolumeCheck.feature",
+        "name": "AtLeastOneControlRespRulePerControlVolumeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that no responsibility rule is linked to responsibilities which \"control\" attribute is not true (i.e. control responsibility).",
+        "output_path": "hlt/dpr_check_hlt_OnlyControlResponsibilitiesInTransitionPointDataInControlRespRulesCheck.feature",
+        "name": "OnlyControlResponsibilitiesInTransitionPointDataInControlRespRulesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each role which \"control\" and \"tactical\" attributes are true (i.e. tactical control role), that the \"mappingType\" attribute is assigned to mandatory (i.e. mapping mandatory).",
+        "output_path": "hlt/dpr_check_hlt_TacticalControlRolesHaveMandatoryMappingCheck.feature",
+        "name": "TacticalControlRolesHaveMandatoryMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each OE with role mapping mandatory is assigned to one and only one \"Qualification area\" or \"System partition\" of the configuration unit of which the OE belongs",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneMappingPartitionWithinSameConfigurationUnitPerOEWithMandatoryRoleMappingCheck_ATSUsCol.feature",
+        "name": "ExactlyOneMappingPartitionWithinSameConfigurationUnitPerOEWithMandatoryRoleMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each OE with role mapping mandatory is assigned to one and only one \"Qualification area\" or \"System partition\" of the configuration unit of which the OE belongs",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneMappingPartitionWithinSameConfigurationUnitPerOEWithMandatoryRoleMappingCheck_SystemInstancesCol.feature",
+        "name": "ExactlyOneMappingPartitionWithinSameConfigurationUnitPerOEWithMandatoryRoleMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at least one \"eligibility rule on environment functional domain\" instance for each environment data category.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneENVEligRulePerEnvDataCategoryCheck.feature",
+        "name": "ExactlyOneENVEligRulePerEnvDataCategoryCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at least one \"warning distribution rule\" instance for each warning family.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneWarningDistributionRulePerWarningFamilyCheck.feature",
+        "name": "AtLeastOneWarningDistributionRulePerWarningFamilyCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is one and only one \"Aerodrome SFPL life cycle tuning parameters\" instance per \"aerodrome\" instance.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneAerodromeSFPLTuningInstancePerAerodromeCheck.feature",
+        "name": "ExactlyOneAerodromeSFPLTuningInstancePerAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at least one \"technical command eligibility rule\" instance for each service type.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneTSUPEligRulePerTSUPServiceTypeCheck.feature",
+        "name": "AtLeastOneTSUPEligRulePerTSUPServiceTypeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each control volume is associated to one and only one ATSUAirspace.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneATSUAirspacePerControlVolumeCheck.feature",
+        "name": "ExactlyOneATSUAirspacePerControlVolumeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3026 aerodromes assigned per ATSU.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3026AerodromesPerATSUCheck.feature",
+        "name": "AtMostSC_3026AerodromesPerATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3015 (400) SIDs assigned per aerodrome.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3015SIDsPerAerodromeCheck.feature",
+        "name": "AtMostSC_3015SIDsPerAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3005 (480) responsibilities defined in a project.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3005ResponsibilitiesCheck.feature",
+        "name": "AtMostSC_3005ResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3008 (670) OEs defined in a project.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3008OEsCheck.feature",
+        "name": "AtMostSC_3008OEsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the pre-defined mappings respect the OE/LP compatibility rules.",
+        "output_path": "hlt/dpr_check_hlt_PreDefMappingsRespectOELPCompatibleRulesCheck.feature",
+        "name": "PreDefMappingsRespectOELPCompatibleRulesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each control volume there shall be associated a default responsibility rule that shall always be the last (lowest priority) in the list of rules for that control volume and without criteria.",
+        "output_path": "hlt/dpr_check_hlt_ControlRespRuleWithLowestPriorityForAControlVolumeHasNoCriteriaCheck.feature",
+        "name": "ControlRespRuleWithLowestPriorityForAControlVolumeHasNoCriteriaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each ATSU Airspace is linked to one and only one ATSU.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneATSUPerATSUAirspaceCheck.feature",
+        "name": "ExactlyOneATSUPerATSUAirspaceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that one of the OEs supplied in the \"FREE-TEXT Served OEs\" is associated to one of the ATSU of the system instance.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneOEinFreeTextServedOEsIsDefinedInAnATSUOfASystemInstanceCheck.feature",
+        "name": "AtLeastOneOEinFreeTextServedOEsIsDefinedInAnATSUOfASystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each SFPL transaction is associated to one and only one SFPL eligibility rule.",
+        "output_path": "hlt/dpr_check_hlt_SFPLTransactionAssociatedToExactlyOneSFPLEligRuleCheck.feature",
+        "name": "SFPLTransactionAssociatedToExactlyOneSFPLEligRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all the warning types of a warning family are associated to the same warning domain.",
+        "output_path": "hlt/dpr_check_hlt_WarningTypesWithSameWarningFamilyHaveSameDomainCheck.feature",
+        "name": "WarningTypesWithSameWarningFamilyHaveSameDomainCheck"
+    },
+    {
+        "requirement": "The CSCI shall check if the role is tactical then the role is controlled",
+        "output_path": "hlt/dpr_check_hlt_TacticalRolesAreAlsoControlRolesCheck.feature",
+        "name": "TacticalRolesAreAlsoControlRolesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each role defined as \"technical supervision\" is not a \"controlled\" role.",
+        "output_path": "hlt/dpr_check_hlt_ControlRoleIsNotATechnicalSupervisionRoleCheck.feature",
+        "name": "ControlRoleIsNotATechnicalSupervisionRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if at least one instance of predefined mapping is defined on a qualification area, then exactly one pre-defined mapping is defined as default for a given qualification area.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDefaultPreDefMappingPerQualificationAreaCheck.feature",
+        "name": "ExactlyOneDefaultPreDefMappingPerQualificationAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if at least one instance of predefined system mapping is defined on a SystemPartition, then exactly one pre-defined mapping is defined as default for a given SystemPartition.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDefaultPreDefSysMappingPerSystemPartitionCheck.feature",
+        "name": "ExactlyOneDefaultPreDefSysMappingPerSystemPartitionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that one and only one instance of pre-defined recording configurations is defined as default.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDefaultRecordingConfigCheck.feature",
+        "name": "ExactlyOneDefaultRecordingConfigCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each ATSU Airspace that its ATSU AoI includes all its interest volumes.",
+        "output_path": "hlt/dpr_check_hlt_AOIIncludesAllInterestVolumesInATSUAirspaceCheck.feature",
+        "name": "AOIIncludesAllInterestVolumesInATSUAirspaceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each ATSU Airspace that its ATSU AoI includes all its control volumes.",
+        "output_path": "hlt/dpr_check_hlt_AOIIncludesAllControlVolumesInATSUAirspaceCheck.feature",
+        "name": "AOIIncludesAllControlVolumesInATSUAirspaceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in each aerodrome instance the attribute aerodrome name of aerodrome stands, aprons, aprons/stands, runways and runways/taxiDuration/stands are the same as the aerodrome name.",
+        "output_path": "hlt/dpr_check_hlt_AerodromeIdInAerodromeApronsRunwaysStandsCheck.feature",
+        "name": "AerodromeIdInAerodromeApronsRunwaysStandsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3017 (150) IAPs assigned per aerodrome.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3017IAPsPerAerodromeCheck.feature",
+        "name": "AtMostSC_3017IAPsPerAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the attributes aerodrome.name of:",
+        "output_path": "hlt/dpr_check_hlt_ADEPRunwayBelongsToADEPAndADESRunwayBelongsToADESInPOGOCheck.feature",
+        "name": "ADEPRunwayBelongsToADEPAndADESRunwayBelongsToADESInPOGOCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in each STAR instance the attribute aerodrome.name of referenced runways are the same as the name of the referenced aerodrome.",
+        "output_path": "hlt/dpr_check_hlt_RunwaysInSTARBelongToSTARAerodromeCheck.feature",
+        "name": "RunwaysInSTARBelongToSTARAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each CDR that the ATSUs referenced in a CDR are ATSUs of the same system instance.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneSystemInstanceContainingAllATSUsOfPredefinedCDRCheck.feature",
+        "name": "ExactlyOneSystemInstanceContainingAllATSUsOfPredefinedCDRCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3016 (150) STARs assigned per aerodrome.",
+        "output_path": "hlt/dpr_check_hlt_AtMostSC_3016STARsPerAerodromeCheck.feature",
+        "name": "AtMostSC_3016STARsPerAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each TSA that the ATSUs referenced in a TSA are ATSUs of the same system instance.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneSystemInstanceContainingAllATSUsOfPredefinedTSACheck.feature",
+        "name": "ExactlyOneSystemInstanceContainingAllATSUsOfPredefinedTSACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that at least a rule or a directional flow is defined in predifined ATSU PFL condition instance.",
+        "output_path": "hlt/dpr_check_hlt_DirectionalFlowOrPFLConditionRuleIsDefinedPerPredefinedATSUPFLConditionCheck.feature",
+        "name": "DirectionalFlowOrPFLConditionRuleIsDefinedPerPredefinedATSUPFLConditionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the constraint responsibility is defined for a strategic constraint of type Default Coordination Constraint and not defined for a strategic constraint of type ATC Restriction.",
+        "output_path": "hlt/dpr_check_hlt_ConstraintRespInPredefinedStrategicConstraintDefinedOnlyForDefaultCoordinationConstraintsCheck.feature",
+        "name": "ConstraintRespInPredefinedStrategicConstraintDefinedOnlyForDefaultCoordinationConstraintsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for a Level Strategic Constraint that the mode of the constraint is defined.",
+        "output_path": "hlt/dpr_check_hlt_ModeIsDefinedInLevelStrategicConstraintCheck.feature",
+        "name": "ModeIsDefinedInLevelStrategicConstraintCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that at least a rule or a directional flow is defined in each strategic constraint instance.",
+        "output_path": "hlt/dpr_check_hlt_DirectionalFlowOrRuleIsDefinedPerPredefinedStrategicConstraintCheck.feature",
+        "name": "DirectionalFlowOrRuleIsDefinedPerPredefinedStrategicConstraintCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each OE with role mapping fixed or optional is assigned to none or only one \"Qualification area\" or \"System partition\" of the configuration unit of which the OE belongs.",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneMappingPartitionInSameConfigurationUnitPerOEWithFixedOrOptionalRoleMappingCheck-ATSUsCol.feature",
+        "name": "AtMostOneMappingPartitionInSameConfigurationUnitPerOEWithFixedOrOptionalRoleMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each OE with role mapping fixed or optional is assigned to none or only one \"Qualification area\" or \"System partition\" of the configuration unit of which the OE belongs.",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneMappingPartitionInSameConfigurationUnitPerOEWithFixedOrOptionalRoleMappingCheck-SystemInstancesCol.feature",
+        "name": "AtMostOneMappingPartitionInSameConfigurationUnitPerOEWithFixedOrOptionalRoleMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for the SFPL Life Cycle Tuning Parameters instance that the value of SP_0451 is greater than the value of SP_0452.",
+        "output_path": "hlt/dpr_check_hlt_SFPLSaturationThresholdGreaterThanSFPLDesaturationThresholdInSFPLLifeCycleTuningCheck.feature",
+        "name": "SFPLSaturationThresholdGreaterThanSFPLDesaturationThresholdInSFPLLifeCycleTuningCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each adjacent civil external system instance the coordination type is not set to unknown.",
+        "output_path": "hlt/dpr_check_hlt_AdjacentSystemInstanceProtocolTypeCheck.feature",
+        "name": "AdjacentSystemInstanceProtocolTypeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that if coordination data per COP is defined, then coordination between the two responsibilities of the LOA is OLDI.",
+        "output_path": "hlt/dpr_check_hlt_LOAsWithCoordinationDataPerCOPHaveOLDICoordinationCheck.feature",
+        "name": "LOAsWithCoordinationDataPerCOPHaveOLDICoordinationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each letter of agreement defines a complete set of coordination parameters in common coordination parameters.",
+        "output_path": "hlt/dpr_check_hlt_CommonCoordinationParametersCompletelyDefinedInLOACheck.feature",
+        "name": "CommonCoordinationParametersCompletelyDefinedInLOACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that up to three surveillance systems are associated to each ATSU of the controlled system instance.",
+        "output_path": "hlt/dpr_check_hlt_BetweenOneAndThreeSurveillanceSystemsPerATSUOfControlledSystemInstanceCheck.feature",
+        "name": "BetweenOneAndThreeSurveillanceSystemsPerATSUOfControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for the Region instance that the list of the system instances contains the controlled system instance.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneControlledSystemInstanceInTheRegionOfSystemInstancesCheck.feature",
+        "name": "AtLeastOneControlledSystemInstanceInTheRegionOfSystemInstancesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for the magneticVariationGrid that:",
+        "output_path": "hlt/dpr_check_hlt_TPAreaMagneticVariationGridCornersPositionCheck.feature",
+        "name": "TPAreaMagneticVariationGridCornersPositionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for the magneticVariationGrid that the number of defined magneticDeviationCells is equal to the product of cellsNumberPerLat and cellsNumberPerLong.",
+        "output_path": "hlt/dpr_check_hlt_NumberOfMagneticDeviationCellsIsEqualToProductOfCellsNumberPerLatAndCellsNumberPerLongCheck.feature",
+        "name": "NumberOfMagneticDeviationCellsIsEqualToProductOfCellsNumberPerLatAndCellsNumberPerLongCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is one and only one ATSU Profile Tuning Parameters instance per ATSU of the controlled system instance.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneATSUProfileTuningPerATSUOfControlledSystemInstanceAndNoneForOtherATSUsCheck.feature",
+        "name": "ExactlyOneATSUProfileTuningPerATSUOfControlledSystemInstanceAndNoneForOtherATSUsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most one taxi duration defined per couple of runway/stand",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneTaxiDurationPerRunwayStandCoupleCheck.feature",
+        "name": "AtMostOneTaxiDurationPerRunwayStandCoupleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the ATSU correlation volume is either the ATSU AoR (attribute isEntireAOR at true) or a list of control volumes of the ATSU.",
+        "output_path": "hlt/dpr_check_hlt_EachATSUCorrelVolIsEitherTheATSUAOROrAListOfControlVolumesOfTheATSUCheck.feature",
+        "name": "EachATSUCorrelVolIsEitherTheATSUAOROrAListOfControlVolumesOfTheATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each aerodrome belongs to one and only one aerodrome group. This check does not concern the distant aerodromes.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneAerodromeGroupPerAerodromeCheck.feature",
+        "name": "ExactlyOneAerodromeGroupPerAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each ATSU is assigned to one and only one system instance.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneSystemInstancePerATSUCheck.feature",
+        "name": "ExactlyOneSystemInstancePerATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the same OE and the same LP are referenced only once in a predefined system mapping instance",
+        "output_path": "hlt/dpr_check_hlt_EachOEAndEachLPIsReferencedAtMostOnceInTheSamePreDefSysMappingCheck.feature",
+        "name": "EachOEAndEachLPIsReferencedAtMostOnceInTheSamePreDefSysMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the pre-defined system mappings respect the OE/LP compatibility rules.",
+        "output_path": "hlt/dpr_check_hlt_PreDefSysMappingsRespectOELPCompatibleRulesCheck.feature",
+        "name": "PreDefSysMappingsRespectOELPCompatibleRulesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each system instance, that the Mapping Partition of each Logical Position is either:",
+        "output_path": "hlt/dpr_check_hlt_LPMappingPartitionIsAPartitionOfTheSystemInstanceOrAPartitionOfAnATSUOfTheSystemInstanceCheck.feature",
+        "name": "LPMappingPartitionIsAPartitionOfTheSystemInstanceOrAPartitionOfAnATSUOfTheSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each instance of Test Context Communication, that the context identifier is strictly greater than 0",
+        "output_path": "hlt/dpr_check_hlt_ContextIdStrictlyPositiveInTestContextCommsCheck.feature",
+        "name": "ContextIdStrictlyPositiveInTestContextCommsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each instance of Training Context Communication, that the context identifier is strictly greater than 0.",
+        "output_path": "hlt/dpr_check_hlt_ContextIdStrictlyPositiveInTrainingContextCommsCheck.feature",
+        "name": "ContextIdStrictlyPositiveInTrainingContextCommsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in each predefined configuration two runways of the same aerodrome defined as OPEN have the following characteristics:",
+        "output_path": "hlt/dpr_check_hlt_TwoOpenRunwaysInAPredefinedConfigurationMustNotBeTheSamePhysicalRunwayCheck.feature",
+        "name": "TwoOpenRunwaysInAPredefinedConfigurationMustNotBeTheSamePhysicalRunwayCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each instance of pre-defined recording configuration, that the field aRecordingTuning is a sequence of triplets separated by a \"/\" (e.g. \"comp1,dom1,lev2/comp2,dom2,lev4\" ) :",
+        "output_path": "hlt/dpr_check_hlt_RecordingTuningInRecordingConfigHasValidSyntaxCheck.feature",
+        "name": "RecordingTuningInRecordingConfigHasValidSyntaxCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each instance of Default Performance Class, that the referenced WTC is the same as the WTC of the referenced Aircraft Type.",
+        "output_path": "hlt/dpr_check_hlt_DefaultPerformanceClassWTCIsSameAsAircraftTypeWTCCheck.feature",
+        "name": "DefaultPerformanceClassWTCIsSameAsAircraftTypeWTCCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the AFTN addresses listed in SP_0213 are different from the ones listed in SP_0205.",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressesInIFPPPerTrafficCategoryColDifferentFromAFTNAddressesInAftnAtsEligColCheck.feature",
+        "name": "AFTNAddressesInIFPPPerTrafficCategoryColDifferentFromAFTNAddressesInAftnAtsEligColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that at least one IFPP is defined in the IFPPPerTrafficCategory collection.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneIFPPDefinedInIFPPPerTrafficCategoryColCheck.feature",
+        "name": "AtLeastOneIFPPDefinedInIFPPPerTrafficCategoryColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the aircraft categories available in the procedure restrictions of a POGO are consistent with the AIXM standard.",
+        "output_path": "hlt/dpr_check_hlt_AircraftCategoriesInPOGOsAreConsistentWithAIXMStandardCheck.feature",
+        "name": "AircraftCategoriesInPOGOsAreConsistentWithAIXMStandardCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the aircraft categories available in the procedure restrictions of a SID are consistent with the AIXM standard.",
+        "output_path": "hlt/dpr_check_hlt_AircraftCategoriesInSIDsAreConsistentWithAIXMStandardCheck.feature",
+        "name": "AircraftCategoriesInSIDsAreConsistentWithAIXMStandardCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the aircraft categories available in the procedure restrictions of a STAR are consistent with the AIXM standard.",
+        "output_path": "hlt/dpr_check_hlt_AircraftCategoriesInSTARsAreConsistentWithAIXMStandardCheck.feature",
+        "name": "AircraftCategoriesInSTARsAreConsistentWithAIXMStandardCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all AFTN addresses used in SP_0203 are listed in SP_0213.",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressesInAftnIfppMsgEligPerProviderAreAlsoDefinedInIFPPPerTrafficCategoryCheck.feature",
+        "name": "AFTNAddressesInAftnIfppMsgEligPerProviderAreAlsoDefinedInIFPPPerTrafficCategoryCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the AFTN addresses used in rules for AFTN recipients determination (SR_2028), are listed in SP_0205",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressesInAftnAtsMsgSendingRulesAreAlsoDefinedInAftnAtsEligCheck.feature",
+        "name": "AFTNAddressesInAftnAtsMsgSendingRulesAreAlsoDefinedInAftnAtsEligCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the AFTN addresses used in ATSU AFTN, are listed in SP_0205.",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressesInAftnAddressAtsuCorrespAreAlsoDefinedInAftnAtsEligCheck.feature",
+        "name": "AFTNAddressesInAftnAddressAtsuCorrespAreAlsoDefinedInAftnAtsEligCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the AFTN addresses used in AFTN ATS recipients that are not connected to IFPS (SP_0212), are listed in SP_0205.",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressesInAFTNATSNotConnectedToIFPSAreAlsoDefinedInAftnAtsEligCheck.feature",
+        "name": "AFTNAddressesInAFTNATSNotConnectedToIFPSAreAlsoDefinedInAftnAtsEligCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that only one pre-defined aerodrome group configuration is defined as default for a given aerodrome group.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDefaultAerodromeGroupConfigurationPerAerodromeGroupCheck.feature",
+        "name": "ExactlyOneDefaultAerodromeGroupConfigurationPerAerodromeGroupCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every runway of each SID is a member of the SID's Aerodrome's Runways.",
+        "output_path": "hlt/dpr_check_hlt_SIDRunwaysAreRunwaysOfSIDAerodromeCheck.feature",
+        "name": "SIDRunwaysAreRunwaysOfSIDAerodromeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that upper limit is always superior or equals to the lower limit",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumeAltitudeRangeUpperGreaterThanOrEqualToAltitudeRangeLowerCheck.feature",
+        "name": "CylindricVolumeAltitudeRangeUpperGreaterThanOrEqualToAltitudeRangeLowerCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, minLevelFilter.flightlevelValue is strictly lower than maxLevelFilter.flightlevelValue, for each AsdFiltersActivationSetting instance of a DisplaySetting instance, unless if they are both equal to 0.",
+        "output_path": "hlt/dpr_check_hlt_DisplaySettingAsdFiltersActivationSettingMaxLevelFilterFlightLevelGreaterThanMinLevelFilterFlightLevelUnlessBothAreZeroCheck.feature",
+        "name": "DisplaySettingAsdFiltersActivationSettingMaxLevelFilterFlightLevelGreaterThanMinLevelFilterFlightLevelUnlessBothAreZeroCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"systemTrackEndOfPreOverloadThreshold\" attribute is strictly lower than the value of \"systemTrackEndOfOverloadThreshold\" attribute for each GeneralSDPSParameters instance of a SDPSAndRadarParameters instance, if the \"systemTrackPreOverloadThreshold\" attribute is not set to 0.",
+        "output_path": "hlt/dpr_check_hlt_GeneralSDPSParametersSystemTrackEndOfOverloadThresholdGreaterThanSystemTrackEndOfPreOverloadThresholdIfSystemTrackPreOverloadThresholdIsNotZeroCheck.feature",
+        "name": "GeneralSDPSParametersSystemTrackEndOfOverloadThresholdGreaterThanSystemTrackEndOfPreOverloadThresholdIfSystemTrackPreOverloadThresholdIsNotZeroCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"systemTrackEndOfPreOverloadThreshold\" attribute is strictly lower than the value of \"systemTrackPreOverloadThreshold\" attribute for each GeneralSDPSParameters instance of a SDPSAndRadarParameters instance, if the \"systemTrackEndOfPreOverloadThreshold\" attribute is not set to 0.",
+        "output_path": "hlt/dpr_check_hlt_GeneralSDPSParametersSystemTrackEndOfPreOverloadThresholdLowerThanSystemTrackPreOverloadThresholdUnlessItIsZeroCheck.feature",
+        "name": "GeneralSDPSParametersSystemTrackEndOfPreOverloadThresholdLowerThanSystemTrackPreOverloadThresholdUnlessItIsZeroCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"minPrimaryPlaneSpeed\" attribute is lower than the value of \"maxPrimaryPlaneSpeed\" for each RadarHandlingParameters instance of a SDPSAndRadarParameters instance.",
+        "output_path": "hlt/dpr_check_hlt_RadarHandlingParametersMaxPrimaryPlaneSpeedGreaterThanMinPrimaryPlaneSpeedCheck.feature",
+        "name": "RadarHandlingParametersMaxPrimaryPlaneSpeedGreaterThanMinPrimaryPlaneSpeedCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"minSecondaryPlaneSpeed\" attribute is lower than the value of \"maxSecondaryPlaneSpeed\" for each RadarHandlingParameters instance of a SDPSAndRadarParameters instance.",
+        "output_path": "hlt/dpr_check_hlt_RadarHandlingParametersMaxSecondaryPlaneSpeedGreaterThanMinSecondaryPlaneSpeedCheck.feature",
+        "name": "RadarHandlingParametersMaxSecondaryPlaneSpeedGreaterThanMinSecondaryPlaneSpeedCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"minimalRange\" attribute of a radar characteristics is lower than the defined value of the relevant range attribute of the variable radar parameters, whatever the radar kind PRIMARY, for each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_PrimaryRadarParametersPrimaryRangeGreaterThanMinimalRangeCheck.feature",
+        "name": "PrimaryRadarParametersPrimaryRangeGreaterThanMinimalRangeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"minimalRange\" attribute of a radar characteristics is lower than the defined value of the relevant range attribute of the variable radar parameters, whatever the radar kind SECONDARY, for each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_SecondaryRadarParametersSecondaryRangeGreaterThanMinimalRangeCheck.feature",
+        "name": "SecondaryRadarParametersSecondaryRangeGreaterThanMinimalRangeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of \"minimalRange\" attribute of a radar characteristics is lower than the defined value of the relevant range attribute of the variable radar parameters, whatever the radar kind COMBINED, for each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_CombinedRadarParametersPrimaryAndSecondaryRangeGreaterThanMinimalRangeCheck.feature",
+        "name": "CombinedRadarParametersPrimaryAndSecondaryRangeGreaterThanMinimalRangeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of the \"numberOfInputSectors\" attribute is less or equal than the value of the \"numberOfOuputSectors\" attribute for the RadarInputOutputParameters instance of each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_RadarInputOutputParametersNumberOfOutputSectorsGreaterThanOrEqualToNumberOfInputSectorsCheck.feature",
+        "name": "RadarInputOutputParametersNumberOfOutputSectorsGreaterThanOrEqualToNumberOfInputSectorsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of the \"azimuthCollimation\" attribute is lower than the value of the \"azimuthCollimationError\" attribute for the RadarCollimationParameters instance of each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_RadarCollimationParametersAzimuthCollimationErrorGreaterThanAzimuthCollimationCheck.feature",
+        "name": "RadarCollimationParametersAzimuthCollimationErrorGreaterThanAzimuthCollimationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of the \"rangeCollimation\" attribute is lower than the value of the \"rangeCollimationError\" attribute for the RadarCollimationParameters instance of each common radar parameter instance.",
+        "output_path": "hlt/dpr_check_hlt_RadarCollimationParametersRangeCollimationErrorGreaterThanRangeCollimationCheck.feature",
+        "name": "RadarCollimationParametersRangeCollimationErrorGreaterThanRangeCollimationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each sub tracking area, which constitute a part of the tracking area of a SDPS component, is not named with a name that is already set to identify an area of interest of a sensor.",
+        "output_path": "hlt/dpr_check_hlt_AbstractTrackingAreaNamesDifferentFromSensorAreaOfInterestNamesCheck.feature",
+        "name": "AbstractTrackingAreaNamesDifferentFromSensorAreaOfInterestNamesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the lower flight level of each tracking area is strictly lower than the upper flight level.",
+        "output_path": "hlt/dpr_check_hlt_TrackingAreasColAirportTrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck.feature",
+        "name": "TrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the lower flight level of each tracking area is strictly lower than the upper flight level.",
+        "output_path": "hlt/dpr_check_hlt_TrackingAreasColBlankingTrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck.feature",
+        "name": "TrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the lower flight level of each tracking area is strictly lower than the upper flight level.",
+        "output_path": "hlt/dpr_check_hlt_TrackingAreasColDomainOfInterestTrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck.feature",
+        "name": "TrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the lower flight level of each tracking area is strictly lower than the upper flight level.",
+        "output_path": "hlt/dpr_check_hlt_TrackingAreasColNonAutomaticInitiationTrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck.feature",
+        "name": "TrackingAreaUpperFlightLevelGreaterThanLowerFlightLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a role definition is defined for each created role.",
+        "output_path": "hlt/dpr_check_hlt_EachRoleHasARoleDefinitionCheck.feature",
+        "name": "EachRoleHasARoleDefinitionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check in \"COOP Tuning Parameters\" data category that the value of \"agendaDDSDeltaThreshold\" is lower than \"agendaDDSMaxThreshold\".",
+        "output_path": "hlt/dpr_check_hlt_COOPTuningParamsAgendaDDSMaxThresholdGreaterThanAgendaDDSDeltaThresholdCheck.feature",
+        "name": "COOPTuningParamsAgendaDDSMaxThresholdGreaterThanAgendaDDSDeltaThresholdCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that check in \"COOP Tuning Parameters\" data category that the value of \"otherCOOPDDSDeltaThreshold\" is lower than \"otherCOOPDDSMaxThreshold\".",
+        "output_path": "hlt/dpr_check_hlt_COOPTuningParamsOtherCOOPDDSMaxThresholdGreaterThanOtherCOOPDDSDeltaThresholdCheck.feature",
+        "name": "COOPTuningParamsOtherCOOPDDSMaxThresholdGreaterThanOtherCOOPDDSDeltaThresholdCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the value of the \"CPDLCTerminationTimerReceiver\" attribute is greater than the value of the \"CPDLCControllerResponse\" for each defined CPDLC Parameter.",
+        "output_path": "hlt/dpr_check_hlt_CPDLCParametersCPDLCTerminationTimerReceiverGreaterThanCPDLCControllerResponseCheck.feature",
+        "name": "CPDLCParametersCPDLCTerminationTimerReceiverGreaterThanCPDLCControllerResponseCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each holding area, referenced by an HVI volume, is declared as a stack area.",
+        "output_path": "hlt/dpr_check_hlt_HVIVolumesAssociatedToSTACKPredefinedHoldingAreasCheck.feature",
+        "name": "HVIVolumesAssociatedToSTACKPredefinedHoldingAreasCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for AIW setting, no operational responsibility is referenced to define the default AIW responsibility",
+        "output_path": "hlt/dpr_check_hlt_AIWDefaultResponsabilityValueCheck.feature",
+        "name": "AIWDefaultResponsabilityValueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, at input (manual or import), that for AIW setting, the default AOI name of the AIW is not the name of an operational volume (any existing volume).",
+        "output_path": "hlt/dpr_check_hlt_AIWDefaultAOINameValueCheck.feature",
+        "name": "AIWDefaultAOINameValueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, at input (manual or import), that for AIW setting, the default AOR name of the AIW is not the name of an operational volume (any existing volume).",
+        "output_path": "hlt/dpr_check_hlt_AIWDefaultAORNameCheck.feature",
+        "name": "AIWDefaultAORNameCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each Control Volume of an ATSU of the controlled system which ControlAuthority is GAT is associated to a AIW Control Volume.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneAIWControlVolumePerControlVolumeOfAnATSUWithControlAuthorityGATOfControlledSystemInstanceCheck.feature",
+        "name": "AtLeastOneAIWControlVolumePerControlVolumeOfAnATSUWithControlAuthorityGATOfControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that attribute tooOldTrackThreshold of every QADispalySetting is lower than or equal to the attribute tooOldTrackIsLostThreshold of SNParameters",
+        "output_path": "hlt/dpr_check_hlt_TooOldTrackIsLostThresholdOfSNParametersGreaterThanOrEqualToTooOldTrackThresholdOfQADisplaySettingColCheck.feature",
+        "name": "TooOldTrackIsLostThresholdOfSNParametersGreaterThanOrEqualToTooOldTrackThresholdOfQADisplaySettingColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check the OEs mapped on the same LP of a given suite have the same role and that the OEs mapped on the different LPs of the same suite have different roles.",
+        "output_path": "hlt/dpr_check_hlt_OEsSameLPSameRoleOEsDifferentLPsSameSuiteDifferentRolesCheck.feature",
+        "name": "OEsSameLPSameRoleOEsDifferentLPsSameSuiteDifferentRolesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each Control Responsibility belonging to an ATSU of controlled system which controlAuthority is GAT is associated to an AIW Interest Volume",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneAIWInterestVolumePerControlResponsibilityOfAnATSUWithControlAuthorityGATOfControlledSystemInstanceCheck.feature",
+        "name": "AtLeastOneAIWInterestVolumePerControlResponsibilityOfAnATSUWithControlAuthorityGATOfControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all roles, referenced by a suite template have the same control type.",
+        "output_path": "hlt/dpr_check_hlt_SuiteTemplateControlTypeCheck.feature",
+        "name": "SuiteTemplateControlTypeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a role is referenced once by a given suite template.",
+        "output_path": "hlt/dpr_check_hlt_SuiteTemplatesRoleConfCheck.feature",
+        "name": "SuiteTemplatesRoleConfCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a responsibility cannot be allocated to several suites.",
+        "output_path": "hlt/dpr_check_hlt_AtMostOneSuitePerResponsibilityCheck.feature",
+        "name": "AtMostOneSuitePerResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that default XFLs defined in common default XFL, non COP coordination or coordination per COP are multiple of 5",
+        "output_path": "hlt/dpr_check_hlt_DefaultXFLDefinedInLettersOfAgreementIsMultipleOf5Check.feature",
+        "name": "DefaultXFLDefinedInLettersOfAgreementIsMultipleOf5Check"
+    },
+    {
+        "requirement": "The CSCI shall check that AFTN addresses etfmsAFTNAddress and systemAFTNAddress are different:",
+        "output_path": "hlt/dpr_check_hlt_AFTNAddressCheck.feature",
+        "name": "AFTNAddressCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the magneticVariationGrid covers the whole TP area.",
+        "output_path": "hlt/dpr_check_hlt_MagneticVariationGridCornersTPAreaCheck.feature",
+        "name": "MagneticVariationGridCornersTPAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each Training communication, each LP assigned in the list of OLDI lines is assigned only once.",
+        "output_path": "hlt/dpr_check_hlt_AllLPsFromTrainingContextCommsOLDILinesAreUniqueCheck.feature",
+        "name": "AllLPsFromTrainingContextCommsOLDILinesAreUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each Test communication, each LP assigned in the list of OLDI lines is assigned only once.",
+        "output_path": "hlt/dpr_check_hlt_AllLPsFromTestContextCommsOLDILinesAreUniqueCheck.feature",
+        "name": "AllLPsFromTestContextCommsOLDILinesAreUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each Operation communication, each LP assigned in the list of OLDI lines is assigned only once.",
+        "output_path": "hlt/dpr_check_hlt_AllLPsFromOperationContextCommsOLDILinesAreUniqueCheck.feature",
+        "name": "AllLPsFromOperationContextCommsOLDILinesAreUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each instance of \"ATSU OLDI SFPL MESSAGES ELIGIBILITY\", that in the \"oldi Sfpl Msg Elig list\" the CFD and BFD messages have the same value for the fields \"reception is eligible\" and \"transmission eligible\".",
+        "output_path": "hlt/dpr_check_hlt_AtsusOldiSfplMsgEligWithCFDAndBFDMessagesHaveTheSameValueForReceptionIsEligibleAndTransmissionEligibleCheck.feature",
+        "name": "AtsusOldiSfplMsgEligWithCFDAndBFDMessagesHaveTheSameValueForReceptionIsEligibleAndTransmissionEligibleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for \"Coordination Tuning Parameters\" that Threshold to automatically unskip an automatically skipped EXE_LP on SFPL update (SP_0461) is greater than Threshold distance for Automatic skip (SP_0460)",
+        "output_path": "hlt/dpr_check_hlt_AutomaticUnSkipThresholdGreaterThanAutomaticSkipThresholdInCoordTuningColCheck.feature",
+        "name": "AutomaticUnSkipThresholdGreaterThanAutomaticSkipThresholdInCoordTuningColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the sequence of segments is consistent (the last point of a segment is the first point of the next segment).",
+        "output_path": "hlt/dpr_check_hlt_EndingPtOfRouteSegmentOfAirwaysIsTheSameAsStartingPtOfNextRouteSegmentCheck.feature",
+        "name": "EndingPtOfRouteSegmentOfAirwaysIsTheSameAsStartingPtOfNextRouteSegmentCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that :",
+        "output_path": "hlt/dpr_check_hlt_OneModifiableAircraftPerformancesPerAircraftPerformanceAircraftTypeCheck.feature",
+        "name": "OneModifiableAircraftPerformancesPerAircraftPerformanceAircraftTypeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that an ATSU appears only once in the table of correspondance between ATSUs and associated LPs.",
+        "output_path": "hlt/dpr_check_hlt_AnATSUAppearsOnlyOnceInLpAtsuCorrespColCheck.feature",
+        "name": "AnATSUAppearsOnlyOnceInLpAtsuCorrespColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the DAF account data category is not empty.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneDAFAccountCheck.feature",
+        "name": "AtLeastOneDAFAccountCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that:",
+        "output_path": "hlt/dpr_check_hlt_TheApplicationPointAndTargetSegmentOfPredefinedStrategicConstraintsDependOnConstraintTypeCheck.feature",
+        "name": "TheApplicationPointAndTargetSegmentOfPredefinedStrategicConstraintsDependOnConstraintTypeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check the values of rule target and responsability data for each responsability rule are mapped as follows:",
+        "output_path": "hlt/dpr_check_hlt_RespDataListIsCompatibleWithTheRuleTargetInControlRespRulesColCheck.feature",
+        "name": "RespDataListIsCompatibleWithTheRuleTargetInControlRespRulesColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each system instance, that all LP of the mapping partition are defined in the predefined mappings.",
+        "output_path": "hlt/dpr_check_hlt_AllLPsAreReferencedByExactlyOneItemInAtLeastOnePredefinedMappingWithTheSameMappingPartitionAsTheLPCheck.feature",
+        "name": "AllLPsAreReferencedByExactlyOneItemInAtLeastOnePredefinedMappingWithTheSameMappingPartitionAsTheLPCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the Allotment Plan is not empty when the parameter noAllotmentPlan of SSRCodeTuningCol is set to false.",
+        "output_path": "hlt/dpr_check_hlt_ADefaultAllotmentPlanIsDefinedIfSSRCodeTuningNoAllotmentPlanIsFalseCheck.feature",
+        "name": "ADefaultAllotmentPlanIsDefinedIfSSRCodeTuningNoAllotmentPlanIsFalseCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each communication (OperationnalComms, TestContextComms, TrainningContextComms), a correlation distribution channel is defined for every Surveillance System defined of the dataset.",
+        "output_path": "hlt/dpr_check_hlt_EachSystemCommsHasASurvCorrelCorrespDefinedForEachSurveillanceSystemCheck.feature",
+        "name": "EachSystemCommsHasASurvCorrelCorrespDefinedForEachSurveillanceSystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each \"TP area\" instance respects the following associated maximum linear and square sizes: maximum linear size = SC_3027 (2040) and maximum square size = SC_3028 (2612)",
+        "output_path": "hlt/dpr_check_hlt_TpAreaPolygonGeometricSurfaceCheck.feature",
+        "name": "TpAreaPolygonGeometricSurfaceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each controlled \"ATSU Airspace\" instance respects:",
+        "output_path": "hlt/dpr_check_hlt_ATSUSystemInstanceVolumeProjectionVerticesAndLevelCheck.feature",
+        "name": "ATSUSystemInstanceVolumeProjectionVerticesAndLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for a speed range or a level range in a strategic constraint that the lower value is not higher than the upper value.",
+        "output_path": "hlt/dpr_check_hlt_SpeedOrLevelRangeHaveMinLowerThanOrEqualToMaxInPredefinedStrategicConstraintsColCheck.feature",
+        "name": "SpeedOrLevelRangeHaveMinLowerThanOrEqualToMaxInPredefinedStrategicConstraintsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for the level range in an airway the lower value is not higher than the upper value.",
+        "output_path": "hlt/dpr_check_hlt_FlightLevelRangeLowerAttributeLowerThanOrEqualToUpperAttributeInAirwaysColCheck.feature",
+        "name": "FlightLevelRangeLowerAttributeLowerThanOrEqualToUpperAttributeInAirwaysColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all the referenced macro criterias of a rule, correspond to existing macro criterias and that the rule kind of the macro corresponds to the rule.",
+        "output_path": "hlt/dpr_check_hlt_RuleKindOfMacroCriteriasUsedInRulesCorrespondsToKindOfContainingRuleCheck.feature",
+        "name": "RuleKindOfMacroCriteriasUsedInRulesCorrespondsToKindOfContainingRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all the runways defined in PredefinedConfiguration are runways of aerodromes in AerodromeGroup.",
+        "output_path": "hlt/dpr_check_hlt_RunwaysInPredefinedConfigurationAreRunwaysOfAerodromesInAerodromeGroupCheck.feature",
+        "name": "RunwaysInPredefinedConfigurationAreRunwaysOfAerodromesInAerodromeGroupCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each system predefined mapping, that every LP is referenced only once in the mapping.",
+        "output_path": "hlt/dpr_check_hlt_LPsInPreDefSysMappingUniquenessCheck.feature",
+        "name": "LPsInPreDefSysMappingUniquenessCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that names of AbstractCDRs are unique among all instances.",
+        "output_path": "hlt/dpr_check_hlt_AbstractCDRsNamesAreUniqueCheck.feature",
+        "name": "AbstractCDRsNamesAreUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup, the RVSMUpperLimit is greater than the RVSMLowerLimit.",
+        "output_path": "hlt/dpr_check_hlt_RVSMUpperLimitGreaterThanRVSMLowerLimitCheck.feature",
+        "name": "RVSMUpperLimitGreaterThanRVSMLowerLimitCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup the imminentTime is lower or equal to the warningTime which is lower or equal to the TCTLookAheadTime",
+        "output_path": "hlt/dpr_check_hlt_ImminentTimeLowerOrEqThanWarningTimeLowerOrEqThanTCTLookAheadTimeCheck.feature",
+        "name": "ImminentTimeLowerOrEqThanWarningTimeLowerOrEqThanTCTLookAheadTimeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup the altitudeSeparationHigh is greater or equal to the altitiudeSeparationLow",
+        "output_path": "hlt/dpr_check_hlt_AltitudeSeparationHighGreaterOrEqThanAltitudeSeparationLowCheck.feature",
+        "name": "AltitudeSeparationHighGreaterOrEqThanAltitudeSeparationLowCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup the iflROCRODS1 is greater or equal to the iflROCRODS3.",
+        "output_path": "hlt/dpr_check_hlt_IflROCRODS1GreaterOrEqThanIflROCRODS3Check.feature",
+        "name": "IflROCRODS1GreaterOrEqThanIflROCRODS3Check"
+    },
+    {
+        "requirement": "The CSCI shall check that for the TCTRegion the lower value of the verticalExtension is lower than its upper value",
+        "output_path": "hlt/dpr_check_hlt_VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTRegionCheck.feature",
+        "name": "VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTRegionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCT Parameters group, the minVerticalSpeedClimb is lower than the maxVerticalSpeedClimb, the minVerticalSpeedDescend is lower than the maxVerticalSpeedDescend.",
+        "output_path": "hlt/dpr_check_hlt_MaxVerticalSpeedGreaterThanMinVerticalSpeedForClimbAndDescendRangesCheck.feature",
+        "name": "MaxVerticalSpeedGreaterThanMinVerticalSpeedForClimbAndDescendRangesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCT parameters group, the deltaTMax is greater than the deltaT",
+        "output_path": "hlt/dpr_check_hlt_DeltaTMaxGreaterThanDeltaTCheck.feature",
+        "name": "DeltaTMaxGreaterThanDeltaTCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTProcessingArea the lower value of the verticalExtension is lower than its upper value",
+        "output_path": "hlt/dpr_check_hlt_VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTProcessingAreaCheck.feature",
+        "name": "VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTProcessingAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTInhibitionArea the lower value of the verticalExtension is lower than its upper value",
+        "output_path": "hlt/dpr_check_hlt_VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTInhibitionAreaCheck.feature",
+        "name": "VerticalExtensionUpperGreaterThanVerticalExtensionLowerInTCTInhibitionAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check vertex unicity in Cylindric Volumes.",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumeUniqueVerticesCheck.feature",
+        "name": "CylindricVolumeUniqueVerticesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each OLDI lines (defined in Operational, Test or Training context communication collection), every external ATSU concerned by this line (ie. ATSU corresponding to the LP of this line) which have a definition in the AtsusOldiSfplMsgElig Collection, have the same format defined (ADEXP or ICAO).",
+        "output_path": "hlt/dpr_check_hlt_AllConcernedATSUsOfSystemCommOLDILineHaveTheSameFormatCheck.feature",
+        "name": "AllConcernedATSUsOfSystemCommOLDILineHaveTheSameFormatCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the content of extra parameters in Rules definition that refer to elements (point name, list of points, TSA name, aerodrome name, Resp name and runway name) correspond to an existing element of the dataset.",
+        "output_path": "hlt/dpr_check_hlt_RulesExtraParametersCorrespondToExistingElementsCheck.feature",
+        "name": "RulesExtraParametersCorrespondToExistingElementsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check (at import and during a check) that the value of rules criterias associated to String or Enum item that uses a BELONG_TO comparator does not have any spaces.",
+        "output_path": "hlt/dpr_check_hlt_ValueOfStringAndEnumCriteriaWithBelongToComparatorDoesNotContainSpacesCheck.feature",
+        "name": "ValueOfStringAndEnumCriteriaWithBelongToComparatorDoesNotContainSpacesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check (at import or during a check) that the rules criterias comparator associated to String item has one of the following values: \"EQUALS\", \"DIFFER\", \"BELONG_TO\"",
+        "output_path": "hlt/dpr_check_hlt_ValueOfStringCriteriaComparatorIsEqualsOrDifferOrBelongToCheck.feature",
+        "name": "ValueOfStringCriteriaComparatorIsEqualsOrDifferOrBelongToCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each ContextId attribute of the collection TestStateTuningCol is defined in the collection TestContextCommsCol.",
+        "output_path": "hlt/dpr_check_hlt_ContextIdOfEachTestStateTuningIsDefinedInTestContextCommsCheck.feature",
+        "name": "ContextIdOfEachTestStateTuningIsDefinedInTestContextCommsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each ContextId attribute and each theContextName attribute of LocalCommParamsPerTestContext for MAPMCommunicationParametersCol is defined in the collection TestContextCommsCol.",
+        "output_path": "hlt/dpr_check_hlt_EachLocalCommParamsPerTestContextInMAPMCommunicationParametersIsDefinedInTestContextCommsColCheck.feature",
+        "name": "EachLocalCommParamsPerTestContextInMAPMCommunicationParametersIsDefinedInTestContextCommsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each ContextId attribute and each theContextName attribute of localCommParamsPerTrainingContext for MAPMCommunicationParametersCol is defined in the collection TrainingContextCommsCol.",
+        "output_path": "hlt/dpr_check_hlt_EachLocalCommParamsPerTrainingContextInMAPMCommunicationParametersIsDefinedInTrainingContextCommsColCheck.feature",
+        "name": "EachLocalCommParamsPerTrainingContextInMAPMCommunicationParametersIsDefinedInTrainingContextCommsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each controlled QualificationArea there exists exactly one QaDisplaySetting for this QualificationArea",
+        "output_path": "hlt/dpr_check_hlt_QADisplaySettingDefinedForEachControlledQualificationAreaCheck.feature",
+        "name": "QADisplaySettingDefinedForEachControlledQualificationAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each QaDisplaySetting its first SEP threshold is strictly lower than its second SEP threshold",
+        "output_path": "hlt/dpr_check_hlt_FirstSEPThresholdLowerThanSecondSEPThresholdInQADisplaySettingsCheck.feature",
+        "name": "FirstSEPThresholdLowerThanSecondSEPThresholdInQADisplaySettingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each CommonGeneralSDPSParameter's SIC (respectively SAC) shall match the SIC (respectively SAC) of the SurveillanceComm which has the same surveillance system name.",
+        "output_path": "hlt/dpr_check_hlt_CommonGeneralSDPSParametersSICAndSACIdsAreEqualToTheSICAndSACIdsOfTheCorrespondingSurveillanceCommCheck.feature",
+        "name": "CommonGeneralSDPSParametersSICAndSACIdsAreEqualToTheSICAndSACIdsOfTheCorrespondingSurveillanceCommCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a TSA listed for planning in a PlanningMacroCommand is not listed for deactivation within the same macro-command.",
+        "output_path": "hlt/dpr_check_hlt_PlanningMacroCommandActivationDeactivationCheck.feature",
+        "name": "PlanningMacroCommandActivationDeactivationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each locking macro command, no HVI map is defined in both lists of maps to activate and maps to deactivate, on activation of this macro command.",
+        "output_path": "hlt/dpr_check_hlt_HVIMapsToActivateCheck.feature",
+        "name": "HVIMapsToActivateCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each locking macro command, no HVI map is defined as map to activate on both activation and deactivation of this locking macro command.",
+        "output_path": "hlt/dpr_check_hlt_HVIMapActivationActDeactCheck.feature",
+        "name": "HVIMapActivationActDeactCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a given aerodrome group configuration is not be listed for loading upon both activation and deactivation of a single locking macro-command.",
+        "output_path": "hlt/dpr_check_hlt_LockingMacroCommandsCheck.feature",
+        "name": "LockingMacroCommandsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a given predefined frequency plan is not be listed for loading upon both activation and deactivation of a single locking macro-command.",
+        "output_path": "hlt/dpr_check_hlt_UniqueFrequencyPlanCheck.feature",
+        "name": "UniqueFrequencyPlanCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a CylindricVolume's base does not have crossing segments, and that the difference between latitudes or difference between longitudes of two points from the base of a CV is greater or equal than 1000 milliseconds.",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumeCheck.feature",
+        "name": "CylindricVolumeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup the higher value of the threshold is greater than its lower value",
+        "output_path": "hlt/dpr_check_hlt_HighThresholdGreaterThanOrEqualToLowThresholdInTCTParametersGroupCheck.feature",
+        "name": "HighThresholdGreaterThanOrEqualToLowThresholdInTCTParametersGroupCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each SSRCodesFiltersAndLabels, an SSR code is not implied in two different ranges.",
+        "output_path": "hlt/dpr_check_hlt_NoSSRCodeImpliedInDifferentRangesInSSRCodesFiltersAndLabelsInQADisplaySettingCheck.feature",
+        "name": "NoSSRCodeImpliedInDifferentRangesInSSRCodesFiltersAndLabelsInQADisplaySettingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the theCRTCriteria contains a SFPLElementaryRule with boolean isCRTcriteria equals to true and all criteria of the rule shall be linked to control responsibility.",
+        "output_path": "hlt/dpr_check_hlt_AllCriteriaInCRTCriteriaInWarningDistributionRulesConcernControlResponsibilitiesCheck.feature",
+        "name": "AllCriteriaInCRTCriteriaInWarningDistributionRulesConcernControlResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the theIRTCriteria contains a SFPLElementaryRule with boolean isCRTcriteria equals to false and all criteria of the rule shall be linked to informed responsibility.",
+        "output_path": "hlt/dpr_check_hlt_AllCriteriaInIRTCriteriaInWarningDistributionRulesConcernInformedResponsibilitiesCheck.feature",
+        "name": "AllCriteriaInIRTCriteriaInWarningDistributionRulesConcernInformedResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that one and only one occurrence of surveillance systems collection elements has its \"isFpmPrimary\" attribute to true.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOnePrimaryFpmSurveillanceSystemCheck.feature",
+        "name": "ExactlyOnePrimaryFpmSurveillanceSystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that:",
+        "output_path": "hlt/dpr_check_hlt_TimeAndDistanceForNDASendingAreEqualToTimeAndDistanceForLOFSendingInDataLinkTuningCheck.feature",
+        "name": "TimeAndDistanceForNDASendingAreEqualToTimeAndDistanceForLOFSendingInDataLinkTuningCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that no OE is named FREEXFREE",
+        "output_path": "hlt/dpr_check_hlt_OEsDefinedInATSUsDoNotHaveNameFREEXFREECheck.feature",
+        "name": "OEsDefinedInATSUsDoNotHaveNameFREEXFREECheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each CDR that the First Point and Last point of its portion of Airway are present in the Route of the corresponding Airway",
+        "output_path": "hlt/dpr_check_hlt_FirstAndLastPointInPredefinedCDRBelongToTheCDRAirwayCheck.feature",
+        "name": "FirstAndLastPointInPredefinedCDRBelongToTheCDRAirwayCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that CPDLCTerminationTimerSender (in CPDLCParameters collection) is greater than CPDLCPilotResponseATN (in CPDLCParameters collection).",
+        "output_path": "hlt/dpr_check_hlt_CPDLCTerminationTimerSenderGreaterThanCPDLCPilotResponseATNInCPDLCParametersCheck.feature",
+        "name": "CPDLCTerminationTimerSenderGreaterThanCPDLCPilotResponseATNInCPDLCParametersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in a QA PreDefMapping, for each Suite, the same number of OEs is mapped on all LPs of this Suite.",
+        "output_path": "hlt/dpr_check_hlt_LPsSameSuiteSameNumberOfOEsInPreDefMappingCheck.feature",
+        "name": "LPsSameSuiteSameNumberOfOEsInPreDefMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that an AIW control volume responsibility shall be a control responsibility.",
+        "output_path": "hlt/dpr_check_hlt_AIWControlVolumeResponsibilitiesAreControlResponsibilitiesCheck.feature",
+        "name": "AIWControlVolumeResponsibilitiesAreControlResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that an AIW interest volume responsibility shall be a control responsibility.",
+        "output_path": "hlt/dpr_check_hlt_AIWInterestVolumeResponsibilitiesAreControlResponsibilitiesCheck.feature",
+        "name": "AIWInterestVolumeResponsibilitiesAreControlResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a Coflight interest volume responsibility shall be a control responsibility.",
+        "output_path": "hlt/dpr_check_hlt_InformationRulesOnlyReferenceControlResponsibilitiesCheck.feature",
+        "name": "InformationRulesOnlyReferenceControlResponsibilitiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that within OEGroupDisplaySettingCol, a combination of responsibilities is associated once to a role.",
+        "output_path": "hlt/dpr_check_hlt_OEGroupDisplaySettingsWithTheSameListOfResponsibilitiesDoNotReferenceAnyCommonRoleCheck.feature",
+        "name": "OEGroupDisplaySettingsWithTheSameListOfResponsibilitiesDoNotReferenceAnyCommonRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in RoleDisplaySettingCol, the combination of theRoles is unique.",
+        "output_path": "hlt/dpr_check_hlt_EachRoleDisplaySettingHasAUniqueListOfRolesCheck.feature",
+        "name": "EachRoleDisplaySettingHasAUniqueListOfRolesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that aerodromes referenced in arrival lists, predeparture, departure or sequencing lists of display setting fulfill the following conditions :",
+        "output_path": "hlt/dpr_check_hlt_AerodromesReferencedInArrivalOrPredepartureOrDepartureOrSequencingListsInDisplaySettingAreEitherCloseToOrWithinOneATSUOfTheSystemCheck.feature",
+        "name": "AerodromesReferencedInArrivalOrPredepartureOrDepartureOrSequencingListsInDisplaySettingAreEitherCloseToOrWithinOneATSUOfTheSystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the dynamic maps referenced in LockingMacroCommand.actionsAtActivation.standAloneMapToActivate,LockingMacroCommand.actionsAtActivation.standAloneMapToDeactivate, LockingMacroCommand.actionsAtActivation.HVIMapToActivate, LockingMacroCommand.actionsAtActivation.HVIMapToDeactivate, LockingMacroCommand.actionsAtDeactivation.standAloneMapsToActivate, LockingMacroCommand.actionsAtDeactivation.standAloneMapsToDeactivate, LockingMacroCommand.actionsAtDeactivation. HVIMapsToActivate, LockingMacroCommand.actionsAtDeactivation.HVIMapsToDeactivate",
+        "output_path": "hlt/dpr_check_hlt_DynamicMapsCheck.feature",
+        "name": "DynamicMapsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in QaDisplaySetting, all attributes, but stack manager window display settings, holding lists display settings and oceanic flight lists, of DisplaySetting are defined.",
+        "output_path": "hlt/dpr_check_hlt_QADisplaySettingAttributesCheck.feature",
+        "name": "QADisplaySettingAttributesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in QaDisplaySetting, holding lists are defined in DisplaySetting, in case stack manager window is not used..",
+        "output_path": "hlt/dpr_check_hlt_HoldingListsAttributesAreDefinedInDisplaySettingInQADisplaySettingWithoutStackManagerWindowCheck.feature",
+        "name": "HoldingListsAttributesAreDefinedInDisplaySettingInQADisplaySettingWithoutStackManagerWindowCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in QaDisplaySetting, stack manager window is defined in DisplaySetting, in case stack manager window is used.",
+        "output_path": "hlt/dpr_check_hlt_StackManagerWindowAttributesDefinedInDisplaySettingsUsedInQADisplaySettingsWithStackManagerWindowConfigCheck.feature",
+        "name": "StackManagerWindowAttributesDefinedInDisplaySettingsUsedInQADisplaySettingsWithStackManagerWindowConfigCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that a unique priority is defined for each SFPLErroneousMessage type in FDOMessagePrioritiesCol.",
+        "output_path": "hlt/dpr_check_hlt_EverySFPLErroneousMessageTypeIsUsedAtMostOnceInFDOMessagePrioritiesCheck.feature",
+        "name": "EverySFPLErroneousMessageTypeIsUsedAtMostOnceInFDOMessagePrioritiesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each system instance in SystemInstancesCol that the interoperability attribute of each system instance is set to FALSE, and that the system instance Protocole Type is not set to IOP for a non controlled SI, and set to UNKNOWN for a controlled SI.",
+        "output_path": "hlt/dpr_check_hlt_EachSystemInstanceIsNotInterOperableAndIfControlledProximityThenProtocolTypeIsUNKNOWNAndIfNotControlledProximityThenProtocolTypeIsNotIOPCheck.feature",
+        "name": "EachSystemInstanceIsNotInterOperableAndIfControlledProximityThenProtocolTypeIsUNKNOWNAndIfNotControlledProximityThenProtocolTypeIsNotIOPCheck"
+    },
+    {
+        "requirement": "The CSCI shall check there are no more than Radar.MAX_SENSORS defined in the dataset.",
+        "output_path": "hlt/dpr_check_hlt_AtMostMAX_SENSORSSensorsCheck.feature",
+        "name": "AtMostMAX_SENSORSSensorsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every map is either configured as static or dynamic.",
+        "output_path": "hlt/dpr_check_hlt_DynamicMapsCannotBeReferencedAsRelevantOrDisplayedMapsInDisplaySettingsCheck.feature",
+        "name": "DynamicMapsCannotBeReferencedAsRelevantOrDisplayedMapsInDisplaySettingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, in every pre defined allocation plan related to a given QA, every allocated frequency is defined as available for this QA.",
+        "output_path": "hlt/dpr_check_hlt_EachFrequencyInAPreDefFreqAffectationPlanIsAvailableInTheQAOfTheAffectationPlanCheck.feature",
+        "name": "EachFrequencyInAPreDefFreqAffectationPlanIsAvailableInTheQAOfTheAffectationPlanCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for every alias, that referenced responsibilities are part of the QA, to which the alias is applicable.",
+        "output_path": "hlt/dpr_check_hlt_EachResponsibilityInARespAliasIsPartOfTheQAOfTheRespAliasCheck.feature",
+        "name": "EachResponsibilityInARespAliasIsPartOfTheQAOfTheRespAliasCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, in every suite, that associated preferred resp aliases are defined in the QA to which the suite belongs.",
+        "output_path": "hlt/dpr_check_hlt_PreferredAliasesInSuitesArePartOfTheQualificationAreaOfTheSuiteCheck.feature",
+        "name": "PreferredAliasesInSuitesArePartOfTheQualificationAreaOfTheSuiteCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, in every suite, that associated preferred resp are defined in the QA to which the suite belongs.",
+        "output_path": "hlt/dpr_check_hlt_EachPreferredResponsibilityInASuiteIsPartOfTheQAOfTheSuiteCheck.feature",
+        "name": "EachPreferredResponsibilityInASuiteIsPartOfTheQAOfTheSuiteCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, that every alias contains either only resps associated to irremovable role, or no resp associated to irremovable role.",
+        "output_path": "hlt/dpr_check_hlt_EitherEveryResponsibilityInARespAliasOnlyReferencesIrremovableRolesOrNoneOfThemReferencesAnyIrremovableRolesCheck.feature",
+        "name": "EitherEveryResponsibilityInARespAliasOnlyReferencesIrremovableRolesOrNoneOfThemReferencesAnyIrremovableRolesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that preferred responsibilities do not contain any resp associated to irremovable roles.",
+        "output_path": "hlt/dpr_check_hlt_PreferredRespsAndRespsInPreferredRespAliasesInSuitesAreNotIrremovableRespsCheck.feature",
+        "name": "PreferredRespsAndRespsInPreferredRespAliasesInSuitesAreNotIrremovableRespsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that an irremovable role, referenced in several suite templates, is defined at the same location in these templates.",
+        "output_path": "hlt/dpr_check_hlt_EachFIXEDRoleReferencedInSeveralSuiteTemplatesIsDefinedAtTheSamePositionCheck.feature",
+        "name": "EachFIXEDRoleReferencedInSeveralSuiteTemplatesIsDefinedAtTheSamePositionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that inhibition areas are not defined thanks to more than LtwAirspace.MAX_NB_LTW_INHIBITION_ELEMENTARY_VOLUMES elementary volumes.",
+        "output_path": "hlt/dpr_check_hlt_AtMostMAX_NB_LTW_INHIBITION_ELEMENTARY_VOLUMESElementaryAndSubtractedVolumesInLTWInhibitionAreasCheck.feature",
+        "name": "AtMostMAX_NB_LTW_INHIBITION_ELEMENTARY_VOLUMESElementaryAndSubtractedVolumesInLTWInhibitionAreasCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each QA containing at least one responsibility needing a frequency, exactly one predefined freq affectation plan is defined as default.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDefaultPreDefFreqAffectationPlanPerQARequiringFrequencyCheck.feature",
+        "name": "ExactlyOneDefaultPreDefFreqAffectationPlanPerQARequiringFrequencyCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the preDefFreqAffectationPlans should contains every responsibilities requiring a frequency, which are referenced in the QA referenced by this preDefFreqAffectationPlans, and no more responsibilities than these.",
+        "output_path": "hlt/dpr_check_hlt_EachPreDefFreqAffectationPlanContainsOnlyResponsibilitiesRequiringFrequencyAndReferencedInTheQACheck.feature",
+        "name": "EachPreDefFreqAffectationPlanContainsOnlyResponsibilitiesRequiringFrequencyAndReferencedInTheQACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that airways referenced in CDRs contain one and only one flight level layer.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneFlightLevelLayerInAirwaysOfPredefinedCDRsCheck.feature",
+        "name": "ExactlyOneFlightLevelLayerInAirwaysOfPredefinedCDRsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every map whose distribution is defined as mandatory depending on levels for at least one resp, shall be associted to at least one CDR or one TSA.",
+        "output_path": "hlt/dpr_check_hlt_DynamicMapsWithMandatoryDistributionAreAssociatedWithCDRorTSACheck.feature",
+        "name": "DynamicMapsWithMandatoryDistributionAreAssociatedWithCDRorTSACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every planning macro command is provided with at least one CDR or TSA for planning.",
+        "output_path": "hlt/dpr_check_hlt_EachPlanningMacroCommandReferencesAtLeastOneTSAorCDRCheck.feature",
+        "name": "EachPlanningMacroCommandReferencesAtLeastOneTSAorCDRCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every resp taking part in definition of message information rules, are defined in controlled system instances or in ATSUs.",
+        "output_path": "hlt/dpr_check_hlt_RespFromMessageInformationRulesShallBeListedInATSUOrControlledSystemInstancesCheck.feature",
+        "name": "RespFromMessageInformationRulesShallBeListedInATSUOrControlledSystemInstancesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that control responsilities allowed to store coordination data of APL are defined in resps of ATSUs, with the first responsibility in adjacent SI and the second in controlled ATSU.",
+        "output_path": "hlt/dpr_check_hlt_FirstRespIsControlAndDefinedInATSUOfAdjacentSystemInstanceAndSecondRespIsControlAndDefinedInATSUOfControlledSystemInstanceInDefaultCoupleOfRespForAPLTableCheck.feature",
+        "name": "FirstRespIsControlAndDefinedInATSUOfAdjacentSystemInstanceAndSecondRespIsControlAndDefinedInATSUOfControlledSystemInstanceInDefaultCoupleOfRespForAPLTableCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every LP referenced in training context coms is defined in the same adjacent system instance or defined in LPATSUCorrespCol. If the LP referenced in training context coms is defined in the list of LPATSUCorrespCol, it shall be the only one.",
+        "output_path": "hlt/dpr_check_hlt_EachOldiLineInTrainingContextCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck.feature",
+        "name": "EachOldiLineInTrainingContextCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that exploitation data of each granted OE of each eligibility rule is compliant with exploitation data applicable to the related rule.",
+        "output_path": "hlt/dpr_check_hlt_EachGrantedOEOfEachEligibilityRuleIsCompliantWithExploitationDataApplicableToTheRelatedRuleCheck.feature",
+        "name": "EachGrantedOEOfEachEligibilityRuleIsCompliantWithExploitationDataApplicableToTheRelatedRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that authority of the ATSU containing the QA containing the suites referenced in planned military list definition, equals OAT.",
+        "output_path": "hlt/dpr_check_hlt_SuitesReferencedInPlanningMilitaryListsInDisplaySettingsAreAssociatedToAQualificationAreaDefinedInAnOATATSUCheck.feature",
+        "name": "SuitesReferencedInPlanningMilitaryListsInDisplaySettingsAreAssociatedToAQualificationAreaDefinedInAnOATATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that authority of the ATSU containing the QA containing the suites referenced in active military lists definition, equals OAT.",
+        "output_path": "hlt/dpr_check_hlt_SuitesReferencedInActiveMilitaryListsInDisplaySettingsAreAssociatedToAQualificationAreaDefinedInAnOATATSUCheck.feature",
+        "name": "SuitesReferencedInActiveMilitaryListsInDisplaySettingsAreAssociatedToAQualificationAreaDefinedInAnOATATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that macro commands using dynamic maps with limits displayed as altitude shall be defined as read only regarding levels.",
+        "output_path": "hlt/dpr_check_hlt_EachPlanningMacroCommandUsingDynamicMapsWithLimitsDisplayedAsAltitudeDefinedAsReadOnlyRegardingLevelsCheck.feature",
+        "name": "EachPlanningMacroCommandUsingDynamicMapsWithLimitsDisplayedAsAltitudeDefinedAsReadOnlyRegardingLevelsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that macro commands using dynamic maps with limits displayed as altitude shall be not be shared with other systems.",
+        "output_path": "hlt/dpr_check_hlt_EachPlanningMacroCommandUsingDynamicMapsWithLimitsDisplayedAsAltitudeIsNotSharedWithOtherSystemsCheck.feature",
+        "name": "EachPlanningMacroCommandUsingDynamicMapsWithLimitsDisplayedAsAltitudeIsNotSharedWithOtherSystemsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each QAsRespsAliasesDisplay, that the qualification area of this QAsRespsAliasesDisplay equals qualification area of each RespAliasDisplayItem.",
+        "output_path": "hlt/dpr_check_hlt_QAsRespsAliasesDisplayHasTheSameQAAsEachOfItsRespAliasDisplayItemsCheck.feature",
+        "name": "QAsRespsAliasesDisplayHasTheSameQAAsEachOfItsRespAliasDisplayItemsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each QARespDisplay, that the qualification area of this QARespDisplay equals qualification area of each RespDisplayItem.",
+        "output_path": "hlt/dpr_check_hlt_QAsRespsDisplayQAReferencesEveryRespUsedByTheRespDisplayItemsCheck.feature",
+        "name": "QAsRespsDisplayQAReferencesEveryRespUsedByTheRespDisplayItemsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each QARespDisplay, that every resp of the qualification area of this QARespDisplay is defined in the related RespDisplayItem",
+        "output_path": "hlt/dpr_check_hlt_QAsRespsDisplayEveryRespOfTheQAIsUsedByTheRespDisplayItemsCheck.feature",
+        "name": "QAsRespsDisplayEveryRespOfTheQAIsUsedByTheRespDisplayItemsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each couple resp / volume associated by AIWControlVolumes in AIWSettings shall be associated by at least one instance of ControlRespRule as respDataList.resp / ruleTarget.controlVolume.",
+        "output_path": "hlt/dpr_check_hlt_EachRespControlVolumeCoupleInAIWControlVolumesIsAssociatedToAtLeastOneControlRespRuleCheck.feature",
+        "name": "EachRespControlVolumeCoupleInAIWControlVolumesIsAssociatedToAtLeastOneControlRespRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each couple resp / volume associated by AIWInterestVolumes in AIWSettings shall be associated by at least one instance of InformationRuleSet as rules.informedRespList / theKey.",
+        "output_path": "hlt/dpr_check_hlt_EachRespInterestVolumeCoupleInAIWInterestVolumesIsAssociatedToAtLeastOneInformationRuleCheck.feature",
+        "name": "EachRespInterestVolumeCoupleInAIWInterestVolumesIsAssociatedToAtLeastOneInformationRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the defined ATSUName of each aerodrome exists in ATSUsCol",
+        "output_path": "hlt/dpr_check_hlt_EachATSUAssociatedToAnAerodromeIsDefinedInATSUsColCheck.feature",
+        "name": "EachATSUAssociatedToAnAerodromeIsDefinedInATSUsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each planning macro command, if warnings shall be distributed, distribution list shall not be empty.",
+        "output_path": "hlt/dpr_check_hlt_WarningDistributionListIsNotEmptyInPlanningMacroCommandsWithDistributedWarningsCheck.feature",
+        "name": "WarningDistributionListIsNotEmptyInPlanningMacroCommandsWithDistributedWarningsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each planning macro command, if OEs distribution list is not empty, warnings shall be distributed.",
+        "output_path": "hlt/dpr_check_hlt_WarningsAreDistributedInPlanningMacroCommandsWithWarningDistributionListNotEmptyCheck.feature",
+        "name": "WarningsAreDistributedInPlanningMacroCommandsWithWarningDistributionListNotEmptyCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each locking macro command, if warnings shall be distributed, distribution list shall not be empty.",
+        "output_path": "hlt/dpr_check_hlt_WarningDistributionListCheck.feature",
+        "name": "WarningDistributionListCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each locking macro command, if OEs distribution list is not empty, warnings shall be distributed.",
+        "output_path": "hlt/dpr_check_hlt_MacroWarningDistributionListCheck.feature",
+        "name": "MacroWarningDistributionListCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that length of name of control resps belonging to the ATSUs of the controlled system instance do not exceed 2 characters.",
+        "output_path": "hlt/dpr_check_hlt_NamesOfControlRespsDefinedInATSUsOfControlledSystemInstanceAreNotLongerThanTwoCharactersCheck.feature",
+        "name": "NamesOfControlRespsDefinedInATSUsOfControlledSystemInstanceAreNotLongerThanTwoCharactersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every oldi line associated to operational system communication is defined as a line manager.",
+        "output_path": "hlt/dpr_check_hlt_EveryOldiLineInOperationalSystemCommunicationIsALineManagerCheck.feature",
+        "name": "EveryOldiLineInOperationalSystemCommunicationIsALineManagerCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every oldi line associated to training context communication is defined as a line manager.",
+        "output_path": "hlt/dpr_check_hlt_EveryOldiLineInTrainingContextCommunicationIsALineManagerCheck.feature",
+        "name": "EveryOldiLineInTrainingContextCommunicationIsALineManagerCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every oldi line associated to test context communication is defined as a line manager.",
+        "output_path": "hlt/dpr_check_hlt_EveryOldiLineInTestContextCommunicationIsALineManagerCheck.feature",
+        "name": "EveryOldiLineInTestContextCommunicationIsALineManagerCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each TCTParametersGroup the iflROCRODS1 is greater or equal to the iflROCRODS2.",
+        "output_path": "hlt/dpr_check_hlt_EachTCTParametersGroupHasIflROCRODS1GreaterThanOrEqualToIflROCRODS2Check.feature",
+        "name": "EachTCTParametersGroupHasIflROCRODS1GreaterThanOrEqualToIflROCRODS2Check"
+    },
+    {
+        "requirement": "The CSCI shall check that for a given suite and a given predefined mapping, every LP of the suite is mapped in the predefined mapping, or none of them is referenced in the predefined mapping.",
+        "output_path": "hlt/dpr_check_hlt_AllLPsOrNoLPsInSameSuiteMappedInSamePreDefMappingCheck.feature",
+        "name": "AllLPsOrNoLPsInSameSuiteMappedInSamePreDefMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for a given suite and a given predefined mapping, every LP of the suite is mapped to the same responsibilities in the predefined mapping.",
+        "output_path": "hlt/dpr_check_hlt_LPsSameSuiteMappedToSameRespsInsidePreDefMappingCheck.feature",
+        "name": "LPsSameSuiteMappedToSameRespsInsidePreDefMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each predefined mapping, every LP is referenced only once in the mapping.",
+        "output_path": "hlt/dpr_check_hlt_LPsInPreDefMappingUniquenessCheck.feature",
+        "name": "LPsInPreDefMappingUniquenessCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each mapping item of each predefined mapping does not reference several roles.",
+        "output_path": "hlt/dpr_check_hlt_OEsSameItemPreDefMappingReferenceSameRoleCheck.feature",
+        "name": "OEsSameItemPreDefMappingReferenceSameRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each planning and locking macro command, no stand-alone map is defined in both lists of maps to activate and maps to deactivate, on activation of this macro command.",
+        "output_path": "hlt/dpr_check_hlt_StandAloneMapsActivationUnicityCheck.feature",
+        "name": "StandAloneMapsActivationUnicityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each planning and locking macro command, no stand-alone map is defined in both lists of maps to activate and maps to deactivate, on deactivation of this macro command",
+        "output_path": "hlt/dpr_check_hlt_StandAloneMapsDeactivationCheck.feature",
+        "name": "StandAloneMapsDeactivationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each planning and locking macro command, no stand-alone map is defined as map to activate on both activation and deactivation of this macro command.",
+        "output_path": "hlt/dpr_check_hlt_StandAloneMapsToActivateCheck.feature",
+        "name": "StandAloneMapsToActivateCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each planning and locking macro command, no stand-alone map is defined as map to deactivate on both activation and deactivation of this macro command.",
+        "output_path": "hlt/dpr_check_hlt_StandAloneMapsToDeactivateCheck.feature",
+        "name": "StandAloneMapsToDeactivateCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every LP referenced in test context coms is defined in the same adjacent system instance or defined in LPATSUCorrespCol. If the LP referenced in test context coms is defined in the list of LPATSUCorrespCol, it shall be the only one.",
+        "output_path": "hlt/dpr_check_hlt_EachOldiLineInTestContextCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck.feature",
+        "name": "EachOldiLineInTestContextCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every LP referenced in operational coms is defined in the same adjacent system instance or defined in LPATSUCorrespCol.",
+        "output_path": "hlt/dpr_check_hlt_EachOldiLineInOperationalCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck.feature",
+        "name": "EachOldiLineInOperationalCommsOnlyReferencesLPsDefinedInTheSameOldiAdjacentSystemInstanceAndOrOneLPReferencedInTheListOfLPATSUCorrespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every ATSU defined as sender in message rules is defined in ATUs of the controlled system instance.",
+        "output_path": "hlt/dpr_check_hlt_EverySenderATSUInMessageInformationRulesIsAnATSUOfTheControlledSystemInstanceCheck.feature",
+        "name": "EverySenderATSUInMessageInformationRulesIsAnATSUOfTheControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each locking macro command, no HVI map is defined in both lists of maps to activate and maps to deactivate, on deactivation of this macro command.",
+        "output_path": "hlt/dpr_check_hlt_ActionsAtDeactivationHVIMapsCheck.feature",
+        "name": "ActionsAtDeactivationHVIMapsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each locking macro command, no HVI map is defined as map to deactivate on both activation and deactivation of this locking macro command.",
+        "output_path": "hlt/dpr_check_hlt_HVIMapDeactivationActDeactCheck.feature",
+        "name": "HVIMapDeactivationActDeactCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for BFD (resp. CFD) messages, if BFD (resp. CFD) transmission is authorized: DPR shall check that RTEPTS and ROUTE (when present) are exclusive in the OLDI SFPL message eligibility rule bilateral agreement.",
+        "output_path": "hlt/dpr_check_hlt_BFDAndCFDOldiSfplMsgEligThatAreTransmissionEligibleCannotContainBothROUTEAndRTEPTSAsFieldsBilaterallyAgreedCheck.feature",
+        "name": "BFDAndCFDOldiSfplMsgEligThatAreTransmissionEligibleCannotContainBothROUTEAndRTEPTSAsFieldsBilaterallyAgreedCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that non COP coordination state nearPlanning occurs before nearExe in non cop coordination data according to distance parameters..",
+        "output_path": "hlt/dpr_check_hlt_NearPlanningDistanceTriggerBeforeNearExeInNonCOPDataInLOACheck.feature",
+        "name": "NearPlanningDistanceTriggerBeforeNearExeInNonCOPDataInLOACheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that COP coordination state nearPlanning occurs before nearExe in coordination data per COP according to distance parameters.",
+        "output_path": "hlt/dpr_check_hlt_NearPlanningDistanceTriggerBeforeNearExeInCOPDataInLOACheck.feature",
+        "name": "NearPlanningDistanceTriggerBeforeNearExeInCOPDataInLOACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each locking macro command, no mapping is defined as mapping to activate on both activation and deactivation of this locking macro command.",
+        "output_path": "hlt/dpr_check_hlt_SequantialActivationOfPreDefAndSysMappingCheck.feature",
+        "name": "SequantialActivationOfPreDefAndSysMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that adressingRules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_AftnAtsMsgSendingRulesRespectReversePolishNotationCheck.feature",
+        "name": "AftnAtsMsgSendingRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for control are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInControlRespRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInControlRespRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that distribution rules for control are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedDistributionRulesForControlRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedDistributionRulesForControlRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that distribution rules for vicinity are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedDistributionRulesForVicinityRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedDistributionRulesForVicinityRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for segment filtering are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedGeneralInfoRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedGeneralInfoRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for segment filtering are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedMaintainedDuplicationRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedMaintainedDuplicationRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that eligibility rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInCORLMAndFPMEligibilityRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInCORLMAndFPMEligibilityRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that SFPL eligibility rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInSFPLEligibilityRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInSFPLEligibilityRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that interest rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInInformationRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInInformationRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for automatic rejection, coordination parameters acceptance, default XFL and non standard coordination, are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInLOAsNonCOPCoordDataSetRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInLOAsNonCOPCoordDataSetRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for automatic rejection, coordination parameters acceptance, default XFL and non standard coordination, are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInLOAsCoordDataSetPerCOPRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInLOAsCoordDataSetPerCOPRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that local rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_LocalRulesDefinedInAerodromeGroupsRespectReversePolishNotationCheck.feature",
+        "name": "LocalRulesDefinedInAerodromeGroupsRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that PFL rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedATSUPFLConditionRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedATSUPFLConditionRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that short crossing rules are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInShortCrossedVolRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInShortCrossedVolRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for strategic constraints are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInPredefinedStrategicConstraintsRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInPredefinedStrategicConstraintsRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that distribution rules of SFPL warning to CRT and IRT are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInWarningDistributionRulesRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInWarningDistributionRulesRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined system mapping, that partition name of each mapped LP, equals partition name of the system partition referenced in the mapping.",
+        "output_path": "hlt/dpr_check_hlt_LPsPartitionNameEqualsPreDefSysMappingPartitionNameCheck.feature",
+        "name": "LPsPartitionNameEqualsPreDefSysMappingPartitionNameCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined mapping, that partition name of each mapped LP, equals partition name of the qualification area referenced in the mapping.",
+        "output_path": "hlt/dpr_check_hlt_LPsPartitionNameEqualsPreDefMappingPartitionNameCheck.feature",
+        "name": "LPsPartitionNameEqualsPreDefMappingPartitionNameCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each suite, that the partition name defined in LP associated to the suite, is the same as the partition name defined in the QA associated to the suite.",
+        "output_path": "hlt/dpr_check_hlt_EachLPInASuiteHasTheSamePartitionNameAsTheQAOfTheSuiteCheck.feature",
+        "name": "EachLPInASuiteHasTheSamePartitionNameAsTheQAOfTheSuiteCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined system mapping, that the system partition referenced in the mapping, references itself every mapped OEs.",
+        "output_path": "hlt/dpr_check_hlt_EveryOEInAPreDefSysMappingIsReferencedInTheSystemPartitionOfTheMappingCheck.feature",
+        "name": "EveryOEInAPreDefSysMappingIsReferencedInTheSystemPartitionOfTheMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined system mapping, that every mandatory OE, referenced in the system partition related to the mapping, is referenced in the mapping",
+        "output_path": "hlt/dpr_check_hlt_EveryMandatoryOEReferencedInTheSystemPartitionOfAPreDefSysMappingIsAlsoReferencedInTheMappingCheck.feature",
+        "name": "EveryMandatoryOEReferencedInTheSystemPartitionOfAPreDefSysMappingIsAlsoReferencedInTheMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined mapping, that the qualification area referenced in the mapping, references itself every mapped OEs.",
+        "output_path": "hlt/dpr_check_hlt_PreDefMappingOEsReferencedInQualificationAreaCheck.feature",
+        "name": "PreDefMappingOEsReferencedInQualificationAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each predefined mapping, that every mandatory OE, referenced in the qualification area related to the mapping, is referenced in the mapping",
+        "output_path": "hlt/dpr_check_hlt_MandatoryOEsInPreDefMappingQAReferencedInPreDefMappingCheck.feature",
+        "name": "MandatoryOEsInPreDefMappingQAReferencedInPreDefMappingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from MapM in operational mode is unique, according to the couple {localId, remoteId}. As localId is common to every connection, each remoteId shall be different.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFromMapMInOperationalModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFromMapMInOperationalModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that minLevelFilter.flightlevelValue is strictly lower than maxLevelFilter.flightlevelValue, for each DegradedDisplaySetting instance, unless if they are both equal to 0.",
+        "output_path": "hlt/dpr_check_hlt_EachDegradedDisplaySettingHasMinLevelFilterStrictlyLowerThanMaxLevelFilterUnlessTheyAreBothEqualToZeroCheck.feature",
+        "name": "EachDegradedDisplaySettingHasMinLevelFilterStrictlyLowerThanMaxLevelFilterUnlessTheyAreBothEqualToZeroCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each eligibility of OLDI SFPL messages, that atsu1 is part of the controlled system instance",
+        "output_path": "hlt/dpr_check_hlt_ATSU1DefinedInAnAtsusOldiSfplMsgEligIsReferencedInTheControlledSystemInstanceCheck.feature",
+        "name": "ATSU1DefinedInAnAtsusOldiSfplMsgEligIsReferencedInTheControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each eligibility of OLDI SFPL messages, that atsu2 is part of an OLDI adjacent system instance or STRIDA.",
+        "output_path": "hlt/dpr_check_hlt_ATSU2DefinedInAnAtsusOldiSfplMsgEligIsReferencedInAnAdjacentOldiSystemInstanceOrIsASTRIDAATSUCheck.feature",
+        "name": "ATSU2DefinedInAnAtsusOldiSfplMsgEligIsReferencedInAnAdjacentOldiSystemInstanceOrIsASTRIDAATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each eligibility of OLDI Env messages, that atsu1 is part of the controlled system instance",
+        "output_path": "hlt/dpr_check_hlt_ATSU1DefinedInAnAtsusOldiEnvMsgEligIsReferencedInTheControlledSystemInstanceCheck.feature",
+        "name": "ATSU1DefinedInAnAtsusOldiEnvMsgEligIsReferencedInTheControlledSystemInstanceCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each eligibility of OLDI env messages, that atsu2 is part of an OLDI adjacent system instance.",
+        "output_path": "hlt/dpr_check_hlt_ATSU2DefinedInAnAtsusOldiEnvMsgEligIsReferencedInAnAdjacentOldiSystemInstanceOrIsASTRIDAATSUCheck.feature",
+        "name": "ATSU2DefinedInAnAtsusOldiEnvMsgEligIsReferencedInAnAdjacentOldiSystemInstanceOrIsASTRIDAATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that lower and upper level of TSA related to dynamic maps is positive or null.",
+        "output_path": "hlt/dpr_check_hlt_LowerAndUpperLevelOfTSARelatedToDynamicMapsArePositiveOrZeroCheck.feature",
+        "name": "LowerAndUpperLevelOfTSARelatedToDynamicMapsArePositiveOrZeroCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from MapM in training mode is unique, according to the couple {localId, remoteId}. As localId is common to every connection, each remoteId shall be different.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFromMapMInTrainingModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFromMapMInTrainingModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from MapM in test mode is unique, according to the couple {localId, remoteId}. As localId is common to every connection, each remoteId shall be different.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFromMapMInTestModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFromMapMInTestModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from 4Flight in operational mode is unique, according to the couple {localId, remoteId}. As localId is common to every connection, each remoteId shall be different.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFrom4FInOperationalModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFrom4FInOperationalModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from 4Flight in training mode is unique, according to the couple {localId, remoteId}.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFrom4FInTrainingModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFrom4FInTrainingModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, each FMTP connection from 4Flight in test mode is unique, according to the couple {localId, remoteId}.",
+        "output_path": "hlt/dpr_check_hlt_EachFMTPConnectionFrom4FInTestModeIsUniqueCheck.feature",
+        "name": "EachFMTPConnectionFrom4FInTestModeIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each QADisplaySetting, that main ASD is not displayed as a window.",
+        "output_path": "hlt/dpr_check_hlt_MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInQADisplaySettingsCheck.feature",
+        "name": "MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInQADisplaySettingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each OEGroupDisplaySetting related to control role, that main ASD is not displayed as a window.",
+        "output_path": "hlt/dpr_check_hlt_MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInOEGroupDisplaySettingsThatReferenceAtLeastOneControlRoleCheck.feature",
+        "name": "MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInOEGroupDisplaySettingsThatReferenceAtLeastOneControlRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each RoleDisplaySetting related to control role, that main ASD is not displayed as a window.",
+        "output_path": "hlt/dpr_check_hlt_MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInRoleDisplaySettingsThatReferenceAtLeastOneControlRoleCheck.feature",
+        "name": "MainASDIsNotDisplayedAsAWindowInDisplaySettingsReferencedInRoleDisplaySettingsThatReferenceAtLeastOneControlRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each DisplaySetting, that ASD window properties are configured if ASD shall be displayed as a window.",
+        "output_path": "hlt/dpr_check_hlt_ASDWindowPropertiesAreDefinedIfMainASDIsDisplayedAsAWindowInDisplaySettingsCheck.feature",
+        "name": "ASDWindowPropertiesAreDefinedIfMainASDIsDisplayedAsAWindowInDisplaySettingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, for each DisplaySetting, in case ASD is be displayed as a window, that ASD window properties are not configured",
+        "output_path": "hlt/dpr_check_hlt_ASDWindowPropertiesAreNotDefinedIfMainASDIsNotDisplayedAsAWindowInDisplaySettingsCheck.feature",
+        "name": "ASDWindowPropertiesAreNotDefinedIfMainASDIsNotDisplayedAsAWindowInDisplaySettingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, that each predefined TSA referenced in each planning macro command, is referenced by exactly one dynamic map (in its env data).",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneDynamicMapPerTSAReferencedInPlanningMacroCommandsCheck.feature",
+        "name": "ExactlyOneDynamicMapPerTSAReferencedInPlanningMacroCommandsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is no point that contains a wildcard with another character, and check that every point and list of points without wildcard present in String parameters of rules, refer to existing points defined in SignificantPointsCol.",
+        "output_path": "hlt/dpr_check_hlt_PointsInRulesStringParametersReferExistingSignificantPointsCheck.feature",
+        "name": "PointsInRulesStringParametersReferExistingSignificantPointsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every SID present in String parameters of rules refer to existing points defined in SIDCol.",
+        "output_path": "hlt/dpr_check_hlt_SIDStringConditionCheck.feature",
+        "name": "SIDStringConditionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every STAR present in String parameters of rules refer to existing points defined in STARCol.",
+        "output_path": "hlt/dpr_check_hlt_StarStringConditionCheck.feature",
+        "name": "StarStringConditionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every vertex angle of every cylindric volume referenced in control volumes interest volumes, equals 0.",
+        "output_path": "hlt/dpr_check_hlt_AngleVerticesCylindricVolumesCheck.feature",
+        "name": "AngleVerticesCylindricVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each entry and exit points of each predefined holding area are the same.",
+        "output_path": "hlt/dpr_check_hlt_PredefinedHoldingAreaEntryPointAndExitPointAreTheSameCheck.feature",
+        "name": "PredefinedHoldingAreaEntryPointAndExitPointAreTheSameCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each polygon formed by the vertices of AbstractElementaryVolumes of a Control Volume's ATSU of the controlled system instance is included in the polygon of the TP Area.",
+        "output_path": "hlt/dpr_check_hlt_EachBoundingBoxIncludingEachElementaryVolumeOfEachATSUControlVolumeOfTheControlledSystemInstanceIsIncludedInTheTPAreaCheck.feature",
+        "name": "EachBoundingBoxIncludingEachElementaryVolumeOfEachATSUControlVolumeOfTheControlledSystemInstanceIsIncludedInTheTPAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the conspicuity code is not included in SSR codes that the system automatically managed.",
+        "output_path": "hlt/dpr_check_hlt_SSRConspicuityCodeNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck.feature",
+        "name": "SSRConspicuityCodeNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that SSR codes reserved for specific purpose are not included in SSR codes that the system automatically managed.",
+        "output_path": "hlt/dpr_check_hlt_SSRCodesForSpecificPurposeNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck.feature",
+        "name": "SSRCodesForSpecificPurposeNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that conspicuity code is not included in SSR codes reserved for specific purpose.",
+        "output_path": "hlt/dpr_check_hlt_SSRConspicuityCodeNotIncludedInSSRCodesForSpecificPurposeCheck.feature",
+        "name": "SSRConspicuityCodeNotIncludedInSSRCodesForSpecificPurposeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, in SSRCodeTuningCol, if automatic adaptation is on, the number of protection periods shall equal saturationThreshold + 1",
+        "output_path": "hlt/dpr_check_hlt_SSRCodeTuningNumberOfProtectionPeriodsInAccordanceWithSaturationThresholdCheck.feature",
+        "name": "SSRCodeTuningNumberOfProtectionPeriodsInAccordanceWithSaturationThresholdCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the SSR code dedicated to VFR and alert filtering is not used for TRANSIT or LOCAL_TRAFFIC flows.",
+        "output_path": "hlt/dpr_check_hlt_SSRCodesForVFRAndAlertFilteringNotUsedForTransitOrLocalTrafficCheck.feature",
+        "name": "SSRCodesForVFRAndAlertFilteringNotUsedForTransitOrLocalTrafficCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the SSR code dedicated to military and alert filtering is not used for TRANSIT or LOCAL_TRAFFIC flows.",
+        "output_path": "hlt/dpr_check_hlt_SSRCodesForMilitaryAndAlertFilteringNotUsedForTransitOrLocalTrafficCheck.feature",
+        "name": "SSRCodesForMilitaryAndAlertFilteringNotUsedForTransitOrLocalTrafficCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that an aerodrome is not be defined in both AerodromesCol and DistantAerodromes.",
+        "output_path": "hlt/dpr_check_hlt_AnAerodromeIsNotDefinedInBothAerodromesColAndDistantAerodromesSetsColCheck.feature",
+        "name": "AnAerodromeIsNotDefinedInBothAerodromesColAndDistantAerodromesSetsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that non COP coordination state nearPlanning occurs before nearExe in non cop coordination data according to time parameters..",
+        "output_path": "hlt/dpr_check_hlt_NearPlanningTimeTriggerBeforeNearExeInNonCOPDataInLOACheck.feature",
+        "name": "NearPlanningTimeTriggerBeforeNearExeInNonCOPDataInLOACheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement that COP coordination state nearPlanning occurs before nearExe in coordination data per COP according to time parameters.",
+        "output_path": "hlt/dpr_check_hlt_NearPlanningTimeTriggerBeforeNearExeInCOPDataInLOACheck.feature",
+        "name": "NearPlanningTimeTriggerBeforeNearExeInCOPDataInLOACheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each cylindric volume used in LTWAirspace that the angles of all their vertices are null (ATLAS constraint).",
+        "output_path": "hlt/dpr_check_hlt_LTWAirspaceVolumesAngleVerticesCheck.feature",
+        "name": "LTWAirspaceVolumesAngleVerticesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check feach cylindric volume used in HVIVolumeRoot, that the angles of all their vertices are null (ATLAS constraint).",
+        "output_path": "hlt/dpr_check_hlt_HVICylindricVolumeNullAnglesAndVertices.feature",
+        "name": "HVICylindricVolumeNullAnglesAndVertices"
+    },
+    {
+        "requirement": "The CSCI shall check for each cylindric volume used in AIWAirspaceVolumeRoot that the angles of all their vertices are null (ATLAS constraint).",
+        "output_path": "hlt/dpr_check_hlt_AIWAirspaceVolumesAngleVerticesCheck.feature",
+        "name": "AIWAirspaceVolumesAngleVerticesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each cylindric volume used in LTWInhibitionArea that the angles of all their vertices are null (ATLAS constraint).",
+        "output_path": "hlt/dpr_check_hlt_LTWInhibitionVolumesZeroAnglesOfVerticesCheck.feature",
+        "name": "LTWInhibitionVolumesZeroAnglesOfVerticesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each IFPP provider defined into IFPPPerTrafficCategoryCol shall have its AFTN messages eligibility defined into AftnIfppMsgEligPerProviderCol.",
+        "output_path": "hlt/dpr_check_hlt_AFTNMessagesEligibilityIsDefinedForIFPPProvidersCheck.feature",
+        "name": "AFTNMessagesEligibilityIsDefinedForIFPPProvidersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement, that if a coordination between two responsabilities is OLDI, than the coordination data is defined per COP.",
+        "output_path": "hlt/dpr_check_hlt_LOAsWithOLDICoordinationHaveCoordinationDataDefinedPerCOPCheck.feature",
+        "name": "LOAsWithOLDICoordinationHaveCoordinationDataDefinedPerCOPCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each logical position is associated to at most one suite.",
+        "output_path": "hlt/dpr_check_hlt_LogicalPositionAssociatedToAtMostOneSuiteCheck.feature",
+        "name": "LogicalPositionAssociatedToAtMostOneSuiteCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each logical position referenced in the operational conf layout is mapped on a Suite",
+        "output_path": "hlt/dpr_check_hlt_LogicalPositionReferencedInOperationalConfLayoutIsMappedOnASuiteCheck.feature",
+        "name": "LogicalPositionReferencedInOperationalConfLayoutIsMappedOnASuiteCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in DefaultAllotmentPlan, each instance of SSR Category is provided with different SSRTrafficCategory",
+        "output_path": "hlt/dpr_check_hlt_SSRCategoriesInDefaultAllotmentPlanHaveUniqueTypesCheck.feature",
+        "name": "SSRCategoriesInDefaultAllotmentPlanHaveUniqueTypesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that AFL, CFL and XFL fields are not defined in respPositionStateGroupTrackLabelFields",
+        "output_path": "hlt/dpr_check_hlt_QADisplaySettingCheck.feature",
+        "name": "QADisplaySettingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that track label setting of each QA does not associated AFL, CFL or XFL field to quick toggle function key.",
+        "output_path": "hlt/dpr_check_hlt_TrackLabelPresentationSettingsFieldsCheck.feature",
+        "name": "TrackLabelPresentationSettingsFieldsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the minimum (respectively maximum) OE DisplaySetting's level filter status is the same as minimum (respectively maximum) OE Degraded DisplaySetting's level filter status",
+        "output_path": "hlt/dpr_check_hlt_LevelFilterStatusForOEGroupDisplaySettingCheck.feature",
+        "name": "LevelFilterStatusForOEGroupDisplaySettingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the minimum OE DisplaySetting's flight level value is greater or equal to the minimum OE Degraded DisplaySetting's flight level value.",
+        "output_path": "hlt/dpr_check_hlt_DisplaySettingMinFLGreaterOrEqThanDegradedDisplayMinFLCheck.feature",
+        "name": "DisplaySettingMinFLGreaterOrEqThanDegradedDisplayMinFLCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the maximum OE DisplaySetting's flight level value is lower or equal to the maximum OE Degraded DisplaySetting's flight level value.",
+        "output_path": "hlt/dpr_check_hlt_OEGroupDisplaySettingColMaxFilterCheck.feature",
+        "name": "OEGroupDisplaySettingColMaxFilterCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that \"NOHOLDAREA is not used for real predefined holding areas in predefinedHoldingAreasCo).",
+        "output_path": "hlt/dpr_check_hlt_NOHOLDAREAIsNotUsedForRealPredefinedHoldingAreasCheck.feature",
+        "name": "NOHOLDAREAIsNotUsedForRealPredefinedHoldingAreasCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each QA referenced in several predefined frequency affectation plans, that each of these predefined frequency affectation plans referencing the QA, is referenced at least in one locking macro command, as predefined frequency affectation plan to load, either on activation or deactivation of the macro command",
+        "output_path": "hlt/dpr_check_hlt_PreDefFreqAffectationPartitionCheck.feature",
+        "name": "PreDefFreqAffectationPartitionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the dynamic maps referenced in:",
+        "output_path": "hlt/dpr_check_hlt_DynamicMapsDifferentfromTSAandCDRCheck.feature",
+        "name": "DynamicMapsDifferentfromTSAandCDRCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if a mandatory OE is referenced in a qualification area, then at least one predefined mapping references this qualification area.",
+        "output_path": "hlt/dpr_check_hlt_QAReferencedForOEMandatoryCheck.feature",
+        "name": "QAReferencedForOEMandatoryCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the radar ID is equal to the virtualLineNumberEOB",
+        "output_path": "hlt/dpr_check_hlt_CommonRadarParametersVirtualLineNumberEOBIDCheck.feature",
+        "name": "CommonRadarParametersVirtualLineNumberEOBIDCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the radar id is continuous from 1 to n",
+        "output_path": "hlt/dpr_check_hlt_CommonRadarParametersIdCheck.feature",
+        "name": "CommonRadarParametersIdCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if a mandatory OE is referenced in a system partition, then at least one predefined system mapping references this system partition.",
+        "output_path": "hlt/dpr_check_hlt_RefMappingPartitionCheck.feature",
+        "name": "RefMappingPartitionCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the vertices orders are continuous from 1 to n",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumesConsecutiveVerticesCheck.feature",
+        "name": "CylindricVolumesConsecutiveVerticesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every responsibilities in an OE with DisplaySetting are referenced in the same QualificationArea.",
+        "output_path": "hlt/dpr_check_hlt_ResponsibilitiesOfOEInQualificationAreaCheck.feature",
+        "name": "ResponsibilitiesOfOEInQualificationAreaCheck"
+    },
+    {
+        "requirement": "The CSCI shall check either every responsibility and role in OEGroupDisplaySetting are control, or they are all non control.",
+        "output_path": "hlt/dpr_check_hlt_OEGroupResponsibilityAndRoleControlCheck.feature",
+        "name": "OEGroupResponsibilityAndRoleControlCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for each responsibility in OEGroupDisplaySetting, there exists at least one role where an OE is defined with the couple resp/role in OEGroupDisplaySetting",
+        "output_path": "hlt/dpr_check_hlt_OEGroupDisplaySettingRespAndRoleCheck.feature",
+        "name": "OEGroupDisplaySettingRespAndRoleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that OEs and partitions from a configuration unit (either ATSUConfigurationUnit or SystemConfigurationUnit) can only reference resps in the same configuration unit.",
+        "output_path": "hlt/dpr_check_hlt_OEsAndPartitionsOnlyReferenceRespsDefinedInSameConfigurationUnitCheck.feature",
+        "name": "OEsAndPartitionsOnlyReferenceRespsDefinedInSameConfigurationUnitCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that all the runways defined in LocalRules are runways in AerodromeGroup.",
+        "output_path": "hlt/dpr_check_hlt_RunwaysInLocalRulesAreRunwaysInAerodromeGroupCheck.feature",
+        "name": "RunwaysInLocalRulesAreRunwaysInAerodromeGroupCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each Local Rules in Predefined Configurations, for each runway referenced in the local rule, the usage of the local rule is consistent with the operating mode of the runway",
+        "output_path": "hlt/dpr_check_hlt_LocalRuleUsageIsConsistentWithRunwayOperatingModeInAerodromeGroupConfigurationsCheck.feature",
+        "name": "LocalRuleUsageIsConsistentWithRunwayOperatingModeInAerodromeGroupConfigurationsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at least one final recipient, alwaysServedOEs or ruleItems, defined in WarningDistributionRule.",
+        "output_path": "hlt/dpr_check_hlt_AtLeastOneAlwaysServedOEsOrServedRoleOrServedRoleFamilyOrWarningDataDefinedInWarningDistributionRuleCheck.feature",
+        "name": "AtLeastOneAlwaysServedOEsOrServedRoleOrServedRoleFamilyOrWarningDataDefinedInWarningDistributionRuleCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that rules for LOAs condition group are defined according to the reverse polish notation.",
+        "output_path": "hlt/dpr_check_hlt_RulesDefinedInLOAsLOAConditionGroupRespectReversePolishNotationCheck.feature",
+        "name": "RulesDefinedInLOAsLOAConditionGroupRespectReversePolishNotationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is no twice the same ATSU referenced in a surveillance system",
+        "output_path": "hlt/dpr_check_hlt_ATSUInSurveillanceSystemUniquenessCheck.feature",
+        "name": "ATSUInSurveillanceSystemUniquenessCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in an element of AtsusOldiSfplMsgElig, pairOfAtsus are the same pair that the ones of oldiSfplMsgEligList (AtsusOldiSfplMsgElig.pairOfAtus)",
+        "output_path": "hlt/dpr_check_hlt_AtsusOldiSfplMsgEligPairOfAtsusIsTheSameAsEachOldiSfplMsgEligPairOfAtsusCheck.feature",
+        "name": "AtsusOldiSfplMsgEligPairOfAtsusIsTheSameAsEachOldiSfplMsgEligPairOfAtsusCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that ATSU name defined in LP/ATSU correspondance list are not referenced in ATSUAirspaces.",
+        "output_path": "hlt/dpr_check_hlt_ATSUsInLPATSUCorrespListAreNotATSUAirspaceNamesCheck.feature",
+        "name": "ATSUsInLPATSUCorrespListAreNotATSUAirspaceNamesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is no default com resp defined in PreDefMappingItem for PreDefMapping.",
+        "output_path": "hlt/dpr_check_hlt_NoDefaultComRespInPreDefMappingsCheck.feature",
+        "name": "NoDefaultComRespInPreDefMappingsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that if SystemInstanceCol is not empty, than there is one and only one System Instance which is CONTROLLED in this collection",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOneControlledSystemInstanceIfSystemInstancesColNotEmptyCheck.feature",
+        "name": "ExactlyOneControlledSystemInstanceIfSystemInstancesColNotEmptyCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each Tuning Parameter (SP_NN) listed in the table below:",
+        "output_path": "hlt/dpr_check_hlt_ValueIsBetweenMinAndMaxForSPTuningParametersCheck.feature",
+        "name": "ValueIsBetweenMinAndMaxForSPTuningParametersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each Tuning Parameter (SP_NN) listed in the table below, its min (resp. max) is equal to the min (resp. max) defined in the table below.",
+        "output_path": "hlt/dpr_check_hlt_MinAndMaxHaveCorrectValuesForSPTuningParametersCheck.feature",
+        "name": "MinAndMaxHaveCorrectValuesForSPTuningParametersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each of the following collection, at least one instance is defined at dataset validation:",
+        "output_path": "hlt/dpr_check_hlt_CollectionsNotEmptyCheck.feature",
+        "name": "CollectionsNotEmptyCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that every predefined configuration has the same aerodrome group identifier as the aerodrome group it belongs to, that each stand referenced in a runway usage belongs to the same aerodrome as the runway and that each runway referenced in a local rule belongs to the aerodrome referenced by the local rule.",
+        "output_path": "hlt/dpr_check_hlt_SecondaryKeysAreConsistentInAerodromeGroupsCheck.feature",
+        "name": "SecondaryKeysAreConsistentInAerodromeGroupsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that availability TimeTable in predefinedCDRs should not be defined.",
+        "output_path": "hlt/dpr_check_hlt_NoAvailabilityTimeTablesInPredefinedCDRsCheck.feature",
+        "name": "NoAvailabilityTimeTablesInPredefinedCDRsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that published periods in predefinedCDRs should not be defined.",
+        "output_path": "hlt/dpr_check_hlt_NoPublishedPeriodsInPredefinedCDRsCheck.feature",
+        "name": "NoPublishedPeriodsInPredefinedCDRsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the horizontalExtension orders are continuous from 1 to n.",
+        "output_path": "hlt/dpr_check_hlt_HorizontalExtensionOrdersAreContinuousCheck.feature",
+        "name": "HorizontalExtensionOrdersAreContinuousCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the TCT parameter group by default for a TCTRegion has its ID equal to 1",
+        "output_path": "hlt/dpr_check_hlt_DefaultTCTParameterGroupForTheTCTRegionHasIdEqualToOneCheck.feature",
+        "name": "DefaultTCTParameterGroupForTheTCTRegionHasIdEqualToOneCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the PredefinedHoldingArea is composed of one and only one cylindric volume.",
+        "output_path": "hlt/dpr_check_hlt_AirspaceVolumesReferencedInPredefinedHoldingAreasContainOneElementaryCylindricVolumeAndNoSubtractedElementaryVolumesCheck.feature",
+        "name": "AirspaceVolumesReferencedInPredefinedHoldingAreasContainOneElementaryCylindricVolumeAndNoSubtractedElementaryVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the PredefinedHoldingArea upper and lower volumes are not equal",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumeReferencedInTheAirspaceVolumeOfAPredefinedHoldingAreaHasUpperLevelDifferentThanTheLowerLevelCheck.feature",
+        "name": "CylindricVolumeReferencedInTheAirspaceVolumeOfAPredefinedHoldingAreaHasUpperLevelDifferentThanTheLowerLevelCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the HVI Airspace Volume is composed of one or two cylindric volume.",
+        "output_path": "hlt/dpr_check_hlt_HVIAirspaceVolumesContainOneOrTwoElementaryVolumesAndNoSubtractedElementaryVolumesCheck.feature",
+        "name": "HVIAirspaceVolumesContainOneOrTwoElementaryVolumesAndNoSubtractedElementaryVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if the HVI Airspace Volume is composed of two cylindric volumes, than the lower level of the top CV is equal to the upper level of the bottom CV.",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumesAreStackedOnTopOfEachOtherInHVIAirspaceVolumesThatContainTwoElementaryVolumesCheck.feature",
+        "name": "CylindricVolumesAreStackedOnTopOfEachOtherInHVIAirspaceVolumesThatContainTwoElementaryVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if the HVI Airspace Volume is composed of one cylindric volume, than its lower and upper level are not equal.",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumeHasUpperLevelDifferentFromLowerLevelInHVIAirspaceVolumesThatContainOneElementaryVolumeCheck.feature",
+        "name": "CylindricVolumeHasUpperLevelDifferentFromLowerLevelInHVIAirspaceVolumesThatContainOneElementaryVolumeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if the HVI Airspace Volume is composed of two cylindric volumes CV1 and CV2, than CV1 lower and upper levels are not equal, and CV2 lower and upper level are not equal",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumesHaveUpperLevelDifferentFromLowerLevelInHVIAirspaceVolumesThatContainTwoElementaryVolumesCheck.feature",
+        "name": "CylindricVolumesHaveUpperLevelDifferentFromLowerLevelInHVIAirspaceVolumesThatContainTwoElementaryVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that no role or responsibilities are defined twice in an instance of OEGroupDisplaySetting",
+        "output_path": "hlt/dpr_check_hlt_NoResponsibilityAndNoRoleIsReferencedMoreThanOnceInTheSameOEGroupDisplaySettingCheck.feature",
+        "name": "NoResponsibilityAndNoRoleIsReferencedMoreThanOnceInTheSameOEGroupDisplaySettingCheck"
+    },
+    {
+        "requirement": "The CSCI shall check for each letter of agreement where non COP coordination data is defined, then upstream and downstream responsibilities of the LOA are defined in ATSUs of the controlled System Instance",
+        "output_path": "hlt/dpr_check_hlt_UpstreamAndDownstreamResponsibilityAreDefinedInATSUsOfTheControlledSystemInstanceInLOAsThatDefineNonCOPCoordinationDataCheck.feature",
+        "name": "UpstreamAndDownstreamResponsibilityAreDefinedInATSUsOfTheControlledSystemInstanceInLOAsThatDefineNonCOPCoordinationDataCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each ControlRespRule, the first TransitionPointData has no rule association and all the others, if any, have a rule association.",
+        "output_path": "hlt/dpr_check_hlt_FirstTransitionPointDataInAControlRespRuleHasNoRuleAssociationOrNoControlRuleAndAllOthersHaveRuleAssociationCheck.feature",
+        "name": "FirstTransitionPointDataInAControlRespRuleHasNoRuleAssociationOrNoControlRuleAndAllOthersHaveRuleAssociationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in SystemWarningMessagesCol, at least one type of propagation is set to \"true\" between the two attributes responsibleOperationalSupervisionPropagation and technicalSupervisionPropagation.",
+        "output_path": "hlt/dpr_check_hlt_EachSystemWarningMessageHasAtLeastTechnicalSupervisionPropagationOrResponsibleControllerPositionPropagationCheck.feature",
+        "name": "EachSystemWarningMessageHasAtLeastTechnicalSupervisionPropagationOrResponsibleControllerPositionPropagationCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, the mappingPartition of a LP referenced in LpAtsuCorrespCol is not defined in ATSUsCol.",
+        "output_path": "hlt/dpr_check_hlt_MappingPartitionOfAnLPReferencedInLpAtsuCorrespIsNotDefinedInATSUsCheck.feature",
+        "name": "MappingPartitionOfAnLPReferencedInLpAtsuCorrespIsNotDefinedInATSUsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each OLDI lines (defined in Operational, Test or Training context communication collection), every LP in this OLDI Line are defined either in PreDefMappingCol or PreDefSysMappingCol",
+        "output_path": "hlt/dpr_check_hlt_EveryLPFromEachOLDILineIsDefinedInPreDefMappingColOrPreDefSysMappingColCheck.feature",
+        "name": "EveryLPFromEachOLDILineIsDefinedInPreDefMappingColOrPreDefSysMappingColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each OLDI lines (defined in Operational, Test or Training context communication collection), every mapping partition of LPs OLDI lines, are associated to ATSUs defined in either ATSUsCol or LPATSUCorrespCol, and referenced in AtsusOldiSfplMsgElig.",
+        "output_path": "hlt/dpr_check_hlt_EveryLPFromEachOLDILineIsAssociatedToATSUsDefinedInATSUsColOrLPATSUCorrespColAndReferencedInAtsusOldiSfplMsgEligCheck.feature",
+        "name": "EveryLPFromEachOLDILineIsAssociatedToATSUsDefinedInATSUsColOrLPATSUCorrespColAndReferencedInAtsusOldiSfplMsgEligCheck"
+    },
+    {
+        "requirement": "The CSCI shall check the values of RuleAssociation timeAfter, timeBefore, timeBeforeEOBT, timeAfterEOBT, timeBeforeETOT et timeAfterETA are different from 0.",
+        "output_path": "hlt/dpr_check_hlt_Value0IsForbiddenForRuleAssociationTimesCheck.feature",
+        "name": "Value0IsForbiddenForRuleAssociationTimesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the label associated to a SSR code defined as level 2 contains at least one character",
+        "output_path": "hlt/dpr_check_hlt_LabelAssociatedToLevelTwoSSRCodeContainsAtLeastOneCharacterCheck.feature",
+        "name": "LabelAssociatedToLevelTwoSSRCodeContainsAtLeastOneCharacterCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, when systems exchange OLDI messages related to transfer, if AtsusOldiSfplMsgElig exchange OLDI_MAS and OLDI_COF messages, if COF (resp. MAS) message is eligible in transmission then MAS (resp. COF) message is eligible in reception (SP_0206) and vice-versa.",
+        "output_path": "hlt/dpr_check_hlt_BothCOFAndMASMessagesAreEligibleInTransmissionAndOrReceptionOrNoneCheck.feature",
+        "name": "BothCOFAndMASMessagesAreEligibleInTransmissionAndOrReceptionOrNoneCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that SSR Codes 7500, 7600 and 7700 are defined in QADisplaySetting.",
+        "output_path": "hlt/dpr_check_hlt_SSREmergencyCodeRangesArePresentInQADisplaySettingColCheck.feature",
+        "name": "SSREmergencyCodeRangesArePresentInQADisplaySettingColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that SSR Codes 7500, 7600 and 7700 are defined as level 2 alerts in SSRCodesFiltersAndLabels.",
+        "output_path": "hlt/dpr_check_hlt_SSREmergencyCodesAreDefinedAsLevel2AlertInQADisplaySettingColCheck.feature",
+        "name": "SSREmergencyCodesAreDefinedAsLevel2AlertInQADisplaySettingColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that sicId (resp sacId) defined in TestContextCommsCol are identical to sicId (resp sacId) defined in OperationalCommsCol.",
+        "output_path": "hlt/dpr_check_hlt_SICAndSACDefinedInTestContextComsColAreIdenticalWithSICAndSACDefinedInOperationalComsColCheck.feature",
+        "name": "SICAndSACDefinedInTestContextComsColAreIdenticalWithSICAndSACDefinedInOperationalComsColCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that each couple X/Y of AliasName defining a PairOfAtsuAliases is unique in AtsusOldiSfplMsgEligCol and AtsusOldiEnvMsgEligCol.",
+        "output_path": "hlt/dpr_check_hlt_EveryATSUNameCoupleOfPairOfAtsuAliasesIsUniqueCheck.feature",
+        "name": "EveryATSUNameCoupleOfPairOfAtsuAliasesIsUniqueCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that Numerical Expression data items for XFL_CONSTRAINT_FROM_RESP has the extraParameter kind LIST_RESPS",
+        "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInNumericalExpressionOfKindXFLConstraintFromRespCheck.feature",
+        "name": "RulesAreCompliantWithRulesXmlInNumericalExpressionOfKindXFLConstraintFromRespCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that Boolean Expression data items for IS_CURRENT_COM_RESP or IS_PREVIOUS_COM_RESP have the extraParameter kind LIST_RESPS, and that IS_MANUAL_GEO_POINT has the extraParameter kind VOLUME_NAME",
+        "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInBooleanExpressionOfKindIsCurrentComRespOrPreviousComRespAndIsManualGeoPointCheck.feature",
+        "name": "RulesAreCompliantWithRulesXmlInBooleanExpressionOfKindIsCurrentComRespOrPreviousComRespAndIsManualGeoPointCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that Time Expression data items for VOLUME_ENTRY_TIME or VOLUME_EXIT_TIME have the extraParameter kind VOLUME_NAME",
+        "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInTimeExpressionOfKindVolumeEntryTimeOrVolumeExitTimeCheck.feature",
+        "name": "RulesAreCompliantWithRulesXmlInTimeExpressionOfKindVolumeEntryTimeOrVolumeExitTimeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the content of extra parameters in Rules definition that refer to elements (list of resp and volume name) correspond to an existing element of the dataset.",
+        "output_path": "hlt/dpr_check_hlt_RulesContainAtsuRespsAndControlledVolumesCheck.feature",
+        "name": "RulesContainAtsuRespsAndControlledVolumesCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, for ICAO message format of AtsusOldiSplMsgElig and AtsusOldiEnvMsgElig, the ATSU aliases are no more than 4 letters long.",
+        "output_path": "hlt/dpr_check_hlt_ICAOMessagesInATSUAliasesHaveMaximum4LettersCheck.feature",
+        "name": "ICAOMessagesInATSUAliasesHaveMaximum4LettersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that ElementaryVolumeId min value is 0 and ElementaryVolumeId max value is 65535",
+        "output_path": "hlt/dpr_check_hlt_ElementaryVolumeIdFromCylindricVolumesColIsBetween0And65535Check.feature",
+        "name": "ElementaryVolumeIdFromCylindricVolumesColIsBetween0And65535Check"
+    },
+    {
+        "requirement": "The CSCI shall check, for a given WAM system, when neither test target nor site monitoring are defined for that sensor, that all received target reports containing either test target flag or site monitoring flag are systematically discarded by MSTS tracker.",
+        "output_path": "hlt/dpr_check_hlt_NoFixedTargetDefinedForSystematicFilteringOfTestTargetAndSiteMonitoringReportsCheck.feature",
+        "name": "NoFixedTargetDefinedForSystematicFilteringOfTestTargetAndSiteMonitoringReportsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that in a LOA, the uid is the same pair of upstream/downstream resps that the uid of LOAConditionWithCoordSet",
+        "output_path": "hlt/dpr_check_hlt_UpstreamAndDownstreamRespAreTheSamePairInLoaAndInLOAConditionWithCoordSetCheck.feature",
+        "name": "UpstreamAndDownstreamRespAreTheSamePairInLoaAndInLOAConditionWithCoordSetCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the boolean isFlightOfContextFilteringException is always set to True on civil positions.",
+        "output_path": "hlt/dpr_check_hlt_IsFlightOfContextFilteringExceptionTrueForCivilPositionsCheck.feature",
+        "name": "IsFlightOfContextFilteringExceptionTrueForCivilPositionsCheck"
+    },
+    {
+        "requirement": "The CSCI shall check, in case DisplaySetting.QaDisplaySetting.isOceanicQA=True, that in DisplaySetting, oceanic flight lists are defined.",
+        "output_path": "hlt/dpr_check_hlt_OceanicFlightListsAreDefinedInDisplaySettingInQADisplaySettingWithIsOceanicQACheck.feature",
+        "name": "OceanicFlightListsAreDefinedInDisplaySettingInQADisplaySettingWithIsOceanicQACheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the supplementary oceanic conspicuity code, if defined, are not included in SSR codes that the system automatically managed.",
+        "output_path": "hlt/dpr_check_hlt_SupplementaryOceanicConspicuityCodesNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck.feature",
+        "name": "SupplementaryOceanicConspicuityCodesNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that supplementary oceanic conspicuity codes, if defined, are not included in SSR codes reserved for specific purpose.",
+        "output_path": "hlt/dpr_check_hlt_SupplementaryConspicuityCodeNotIncludedInSSRCodesForSpecialPurposeCheck.feature",
+        "name": "SupplementaryConspicuityCodeNotIncludedInSSRCodesForSpecialPurposeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the supplementary oceanic conspicuity codes, if defined, are different from the conspicuity codes.",
+        "output_path": "hlt/dpr_check_hlt_SupplementaryOceanicConspicuityCodesDifferentThanConspicuityCodeCheck.feature",
+        "name": "SupplementaryOceanicConspicuityCodesDifferentThanConspicuityCodeCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the default initial responsibility of APL for an ATSU, is a responsibility defined in a QA of this ATSU, and is a controlled responsibility if at least one controlled responsibility is defined in the QAs of this ATSU.",
+        "output_path": "hlt/dpr_check_hlt_DefaultInitialResponsibilityOfAPLForATSUIsDefinedInQualificationAreaAndIsAControlledResponsibilityCheck.feature",
+        "name": "DefaultInitialResponsibilityOfAPLForATSUIsDefinedInQualificationAreaAndIsAControlledResponsibilityCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that there is at the most SC_3075 ICPs assigned per runway.",
+        "output_path": "hlt/dpr_check_hlt_MaximumSC3075ICPsAssignedPerRunwaysCheck.feature",
+        "name": "MaximumSC3075ICPsAssignedPerRunwaysCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if several ICPs are defined for a couple runway/ICF, then it exists one and only one of these ICPs defined as default.",
+        "output_path": "hlt/dpr_check_hlt_ExactlyOnePredefinedICPIsDefinedAsDefaultCheck.feature",
+        "name": "ExactlyOnePredefinedICPIsDefinedAsDefaultCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each pair controlled ATSU / external OLDI ATSU where PAC reception or transmission is off-line authorized, the OLDI SFPL message eligibility rule includes bilateral agreement regarding ETOT/COORDATA (chosen and exclusive).",
+        "output_path": "hlt/dpr_check_hlt_AControlledOldiAtsuWithPACReceptionOrTransmissionDoesNotIncludeBothETOTAndCOORDATAOrIncludesOnlyOneOfThemInBilateralAgreementCheck.feature",
+        "name": "AControlledOldiAtsuWithPACReceptionOrTransmissionDoesNotIncludeBothETOTAndCOORDATAOrIncludesOnlyOneOfThemInBilateralAgreementCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that for each pair controlled ATSU / external OLDI ATSU where CRQ reception or transmission is off-line authorized, the OLDI SFPL message eligibility rule includes bilateral agreement regarding ETOT/COORDATA (chosen and exclusive).",
+        "output_path": "hlt/dpr_check_hlt_AControlledOldiAtsuWithCRQReceptionOrTransmissionDoesNotIncludeBothETOTAndCOORDATAOrIncludesOnlyOneOfThemInBilateralAgreementCheck.feature",
+        "name": "AControlledOldiAtsuWithCRQReceptionOrTransmissionDoesNotIncludeBothETOTAndCOORDATAOrIncludesOnlyOneOfThemInBilateralAgreementCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that either one CoordinationSet or one CoordinationSetPerCOP is defined per LOA condition group.",
+        "output_path": "hlt/dpr_check_hlt_EitherCoordinationSetOrCoordinationSetPerCOPIsDefinedPerLOAConditionGroupCheck.feature",
+        "name": "EitherCoordinationSetOrCoordinationSetPerCOPIsDefinedPerLOAConditionGroupCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that the Oceanic data processing and alerts are disabled for the QAs of a military ATSU.",
+        "output_path": "hlt/dpr_check_hlt_OceanicFunctionsAreDisabledForTheQAsOfAMilitaryATSUCheck.feature",
+        "name": "OceanicFunctionsAreDisabledForTheQAsOfAMilitaryATSUCheck"
+    },
+    {
+        "requirement": "The CSCI shall check the good use of the character ';' in every extra parameter of any Rules definition at import of the data.",
+        "output_path": "hlt/dpr_check_hlt_SemicolonProperlyUsedInRulesExtraParametersCheck.feature",
+        "name": "SemicolonProperlyUsedInRulesExtraParametersCheck"
+    },
+    {
+        "requirement": "The CSCI shall check that, if the HVI Airspace Volume is composed of two cylindric volumes CV1 (lower CV) and CV2 (top CV), either the bases of CV1 and CV2 have common points, or every points defining the base of CV1 are inside the polygonal base of CV2.",
+        "output_path": "hlt/dpr_check_hlt_CylindricVolumesAreStackedOnTopOfEachOtherInHVIAirspaceVolumesThatContainTwoElementaryVolumesWithTheLowerBaseIncludedInTheUpperBaseORHavingCommonPointsCheck.feature",
+        "name": "CylindricVolumesAreStackedOnTopOfEachOtherInHVIAirspaceVolumesThatContainTwoElementaryVolumesWithTheLowerBaseIncludedInTheUpperBaseORHavingCommonPointsCheck"
+    }
+]
