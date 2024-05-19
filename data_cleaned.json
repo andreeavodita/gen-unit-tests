@@ -745,21 +745,6 @@
         "name": "CylindricVolumeUniqueVerticesCheck"
     },
     {
-        "requirement": "The CSCI shall check that the content of extra parameters in Rules definition that refer to elements (point name, list of points, TSA name, aerodrome name, Resp name and runway name) correspond to an existing element of the dataset.",
-        "output_path": "hlt/dpr_check_hlt_RulesExtraParametersCorrespondToExistingElementsCheck.feature",
-        "name": "RulesExtraParametersCorrespondToExistingElementsCheck"
-    },
-    {
-        "requirement": "The CSCI shall check (at import and during a check) that the value of rules criterias associated to String or Enum item that uses a BELONG_TO comparator does not have any spaces.",
-        "output_path": "hlt/dpr_check_hlt_ValueOfStringAndEnumCriteriaWithBelongToComparatorDoesNotContainSpacesCheck.feature",
-        "name": "ValueOfStringAndEnumCriteriaWithBelongToComparatorDoesNotContainSpacesCheck"
-    },
-    {
-        "requirement": "The CSCI shall check (at import or during a check) that the rules criterias comparator associated to String item has one of the following values: \"EQUALS\", \"DIFFER\", \"BELONG_TO\"",
-        "output_path": "hlt/dpr_check_hlt_ValueOfStringCriteriaComparatorIsEqualsOrDifferOrBelongToCheck.feature",
-        "name": "ValueOfStringCriteriaComparatorIsEqualsOrDifferOrBelongToCheck"
-    },
-    {
         "requirement": "The CSCI shall check that each ContextId attribute of the collection TestStateTuningCol is defined in the collection TestContextCommsCol.",
         "output_path": "hlt/dpr_check_hlt_ContextIdOfEachTestStateTuningIsDefinedInTestContextCommsCheck.feature",
         "name": "ContextIdOfEachTestStateTuningIsDefinedInTestContextCommsCheck"
@@ -828,16 +813,6 @@
         "requirement": "The CSCI shall check that for each SSRCodesFiltersAndLabels, an SSR code is not implied in two different ranges.",
         "output_path": "hlt/dpr_check_hlt_NoSSRCodeImpliedInDifferentRangesInSSRCodesFiltersAndLabelsInQADisplaySettingCheck.feature",
         "name": "NoSSRCodeImpliedInDifferentRangesInSSRCodesFiltersAndLabelsInQADisplaySettingCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that the theCRTCriteria contains a SFPLElementaryRule with boolean isCRTcriteria equals to true and all criteria of the rule shall be linked to control responsibility.",
-        "output_path": "hlt/dpr_check_hlt_AllCriteriaInCRTCriteriaInWarningDistributionRulesConcernControlResponsibilitiesCheck.feature",
-        "name": "AllCriteriaInCRTCriteriaInWarningDistributionRulesConcernControlResponsibilitiesCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that the theIRTCriteria contains a SFPLElementaryRule with boolean isCRTcriteria equals to false and all criteria of the rule shall be linked to informed responsibility.",
-        "output_path": "hlt/dpr_check_hlt_AllCriteriaInIRTCriteriaInWarningDistributionRulesConcernInformedResponsibilitiesCheck.feature",
-        "name": "AllCriteriaInIRTCriteriaInWarningDistributionRulesConcernInformedResponsibilitiesCheck"
     },
     {
         "requirement": "The CSCI shall check that one and only one occurrence of surveillance systems collection elements has its \"isFpmPrimary\" attribute to true.",
@@ -1280,11 +1255,6 @@
         "name": "RulesDefinedInPredefinedStrategicConstraintsRespectReversePolishNotationCheck"
     },
     {
-        "requirement": "The CSCI shall check that distribution rules of SFPL warning to CRT and IRT are defined according to the reverse polish notation.",
-        "output_path": "hlt/dpr_check_hlt_RulesDefinedInWarningDistributionRulesRespectReversePolishNotationCheck.feature",
-        "name": "RulesDefinedInWarningDistributionRulesRespectReversePolishNotationCheck"
-    },
-    {
         "requirement": "The CSCI shall check, for each predefined system mapping, that partition name of each mapped LP, equals partition name of the system partition referenced in the mapping.",
         "output_path": "hlt/dpr_check_hlt_LPsPartitionNameEqualsPreDefSysMappingPartitionNameCheck.feature",
         "name": "LPsPartitionNameEqualsPreDefSysMappingPartitionNameCheck"
@@ -1408,21 +1378,6 @@
         "requirement": "The CSCI shall check, that each predefined TSA referenced in each planning macro command, is referenced by exactly one dynamic map (in its env data).",
         "output_path": "hlt/dpr_check_hlt_ExactlyOneDynamicMapPerTSAReferencedInPlanningMacroCommandsCheck.feature",
         "name": "ExactlyOneDynamicMapPerTSAReferencedInPlanningMacroCommandsCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that there is no point that contains a wildcard with another character, and check that every point and list of points without wildcard present in String parameters of rules, refer to existing points defined in SignificantPointsCol.",
-        "output_path": "hlt/dpr_check_hlt_PointsInRulesStringParametersReferExistingSignificantPointsCheck.feature",
-        "name": "PointsInRulesStringParametersReferExistingSignificantPointsCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that every SID present in String parameters of rules refer to existing points defined in SIDCol.",
-        "output_path": "hlt/dpr_check_hlt_SIDStringConditionCheck.feature",
-        "name": "SIDStringConditionCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that every STAR present in String parameters of rules refer to existing points defined in STARCol.",
-        "output_path": "hlt/dpr_check_hlt_StarStringConditionCheck.feature",
-        "name": "StarStringConditionCheck"
     },
     {
         "requirement": "The CSCI shall check that every vertex angle of every cylindric volume referenced in control volumes interest volumes, equals 0.",
@@ -1610,11 +1565,6 @@
         "name": "OEGroupDisplaySettingRespAndRoleCheck"
     },
     {
-        "requirement": "The CSCI shall check that OEs and partitions from a configuration unit (either ATSUConfigurationUnit or SystemConfigurationUnit) can only reference resps in the same configuration unit.",
-        "output_path": "hlt/dpr_check_hlt_OEsAndPartitionsOnlyReferenceRespsDefinedInSameConfigurationUnitCheck.feature",
-        "name": "OEsAndPartitionsOnlyReferenceRespsDefinedInSameConfigurationUnitCheck"
-    },
-    {
         "requirement": "The CSCI shall check that all the runways defined in LocalRules are runways in AerodromeGroup.",
         "output_path": "hlt/dpr_check_hlt_RunwaysInLocalRulesAreRunwaysInAerodromeGroupCheck.feature",
         "name": "RunwaysInLocalRulesAreRunwaysInAerodromeGroupCheck"
@@ -1660,16 +1610,6 @@
         "name": "ExactlyOneControlledSystemInstanceIfSystemInstancesColNotEmptyCheck"
     },
     {
-        "requirement": "The CSCI shall check that for each Tuning Parameter (SP_NN) listed in the table below:",
-        "output_path": "hlt/dpr_check_hlt_ValueIsBetweenMinAndMaxForSPTuningParametersCheck.feature",
-        "name": "ValueIsBetweenMinAndMaxForSPTuningParametersCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that for each Tuning Parameter (SP_NN) listed in the table below, its min (resp. max) is equal to the min (resp. max) defined in the table below.",
-        "output_path": "hlt/dpr_check_hlt_MinAndMaxHaveCorrectValuesForSPTuningParametersCheck.feature",
-        "name": "MinAndMaxHaveCorrectValuesForSPTuningParametersCheck"
-    },
-    {
         "requirement": "The CSCI shall check that for each of the following collection, at least one instance is defined at dataset validation:",
         "output_path": "hlt/dpr_check_hlt_CollectionsNotEmptyCheck.feature",
         "name": "CollectionsNotEmptyCheck"
@@ -1688,11 +1628,6 @@
         "requirement": "The CSCI shall check that published periods in predefinedCDRs should not be defined.",
         "output_path": "hlt/dpr_check_hlt_NoPublishedPeriodsInPredefinedCDRsCheck.feature",
         "name": "NoPublishedPeriodsInPredefinedCDRsCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that the horizontalExtension orders are continuous from 1 to n.",
-        "output_path": "hlt/dpr_check_hlt_HorizontalExtensionOrdersAreContinuousCheck.feature",
-        "name": "HorizontalExtensionOrdersAreContinuousCheck"
     },
     {
         "requirement": "The CSCI shall check that the TCT parameter group by default for a TCTRegion has its ID equal to 1",
@@ -1755,16 +1690,6 @@
         "name": "MappingPartitionOfAnLPReferencedInLpAtsuCorrespIsNotDefinedInATSUsCheck"
     },
     {
-        "requirement": "The CSCI shall check that for each OLDI lines (defined in Operational, Test or Training context communication collection), every LP in this OLDI Line are defined either in PreDefMappingCol or PreDefSysMappingCol",
-        "output_path": "hlt/dpr_check_hlt_EveryLPFromEachOLDILineIsDefinedInPreDefMappingColOrPreDefSysMappingColCheck.feature",
-        "name": "EveryLPFromEachOLDILineIsDefinedInPreDefMappingColOrPreDefSysMappingColCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that for each OLDI lines (defined in Operational, Test or Training context communication collection), every mapping partition of LPs OLDI lines, are associated to ATSUs defined in either ATSUsCol or LPATSUCorrespCol, and referenced in AtsusOldiSfplMsgElig.",
-        "output_path": "hlt/dpr_check_hlt_EveryLPFromEachOLDILineIsAssociatedToATSUsDefinedInATSUsColOrLPATSUCorrespColAndReferencedInAtsusOldiSfplMsgEligCheck.feature",
-        "name": "EveryLPFromEachOLDILineIsAssociatedToATSUsDefinedInATSUsColOrLPATSUCorrespColAndReferencedInAtsusOldiSfplMsgEligCheck"
-    },
-    {
         "requirement": "The CSCI shall check the values of RuleAssociation timeAfter, timeBefore, timeBeforeEOBT, timeAfterEOBT, timeBeforeETOT et timeAfterETA are different from 0.",
         "output_path": "hlt/dpr_check_hlt_Value0IsForbiddenForRuleAssociationTimesCheck.feature",
         "name": "Value0IsForbiddenForRuleAssociationTimesCheck"
@@ -1795,34 +1720,9 @@
         "name": "SICAndSACDefinedInTestContextComsColAreIdenticalWithSICAndSACDefinedInOperationalComsColCheck"
     },
     {
-        "requirement": "The CSCI shall check that each couple X/Y of AliasName defining a PairOfAtsuAliases is unique in AtsusOldiSfplMsgEligCol and AtsusOldiEnvMsgEligCol.",
-        "output_path": "hlt/dpr_check_hlt_EveryATSUNameCoupleOfPairOfAtsuAliasesIsUniqueCheck.feature",
-        "name": "EveryATSUNameCoupleOfPairOfAtsuAliasesIsUniqueCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that Numerical Expression data items for XFL_CONSTRAINT_FROM_RESP has the extraParameter kind LIST_RESPS",
-        "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInNumericalExpressionOfKindXFLConstraintFromRespCheck.feature",
-        "name": "RulesAreCompliantWithRulesXmlInNumericalExpressionOfKindXFLConstraintFromRespCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that Boolean Expression data items for IS_CURRENT_COM_RESP or IS_PREVIOUS_COM_RESP have the extraParameter kind LIST_RESPS, and that IS_MANUAL_GEO_POINT has the extraParameter kind VOLUME_NAME",
-        "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInBooleanExpressionOfKindIsCurrentComRespOrPreviousComRespAndIsManualGeoPointCheck.feature",
-        "name": "RulesAreCompliantWithRulesXmlInBooleanExpressionOfKindIsCurrentComRespOrPreviousComRespAndIsManualGeoPointCheck"
-    },
-    {
         "requirement": "The CSCI shall check that Time Expression data items for VOLUME_ENTRY_TIME or VOLUME_EXIT_TIME have the extraParameter kind VOLUME_NAME",
         "output_path": "hlt/dpr_check_hlt_RulesAreCompliantWithRulesXmlInTimeExpressionOfKindVolumeEntryTimeOrVolumeExitTimeCheck.feature",
         "name": "RulesAreCompliantWithRulesXmlInTimeExpressionOfKindVolumeEntryTimeOrVolumeExitTimeCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that the content of extra parameters in Rules definition that refer to elements (list of resp and volume name) correspond to an existing element of the dataset.",
-        "output_path": "hlt/dpr_check_hlt_RulesContainAtsuRespsAndControlledVolumesCheck.feature",
-        "name": "RulesContainAtsuRespsAndControlledVolumesCheck"
-    },
-    {
-        "requirement": "The CSCI shall check that, for ICAO message format of AtsusOldiSplMsgElig and AtsusOldiEnvMsgElig, the ATSU aliases are no more than 4 letters long.",
-        "output_path": "hlt/dpr_check_hlt_ICAOMessagesInATSUAliasesHaveMaximum4LettersCheck.feature",
-        "name": "ICAOMessagesInATSUAliasesHaveMaximum4LettersCheck"
     },
     {
         "requirement": "The CSCI shall check that ElementaryVolumeId min value is 0 and ElementaryVolumeId max value is 65535",
@@ -1848,11 +1748,6 @@
         "requirement": "The CSCI shall check, in case DisplaySetting.QaDisplaySetting.isOceanicQA=True, that in DisplaySetting, oceanic flight lists are defined.",
         "output_path": "hlt/dpr_check_hlt_OceanicFlightListsAreDefinedInDisplaySettingInQADisplaySettingWithIsOceanicQACheck.feature",
         "name": "OceanicFlightListsAreDefinedInDisplaySettingInQADisplaySettingWithIsOceanicQACheck"
-    },
-    {
-        "requirement": "The CSCI shall check that the supplementary oceanic conspicuity code, if defined, are not included in SSR codes that the system automatically managed.",
-        "output_path": "hlt/dpr_check_hlt_SupplementaryOceanicConspicuityCodesNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck.feature",
-        "name": "SupplementaryOceanicConspicuityCodesNotIncludedInSSRCodesAutomaticallyManagedBySystemCheck"
     },
     {
         "requirement": "The CSCI shall check that supplementary oceanic conspicuity codes, if defined, are not included in SSR codes reserved for specific purpose.",
@@ -1898,11 +1793,6 @@
         "requirement": "The CSCI shall check that the Oceanic data processing and alerts are disabled for the QAs of a military ATSU.",
         "output_path": "hlt/dpr_check_hlt_OceanicFunctionsAreDisabledForTheQAsOfAMilitaryATSUCheck.feature",
         "name": "OceanicFunctionsAreDisabledForTheQAsOfAMilitaryATSUCheck"
-    },
-    {
-        "requirement": "The CSCI shall check the good use of the character ';' in every extra parameter of any Rules definition at import of the data.",
-        "output_path": "hlt/dpr_check_hlt_SemicolonProperlyUsedInRulesExtraParametersCheck.feature",
-        "name": "SemicolonProperlyUsedInRulesExtraParametersCheck"
     },
     {
         "requirement": "The CSCI shall check that, if the HVI Airspace Volume is composed of two cylindric volumes CV1 (lower CV) and CV2 (top CV), either the bases of CV1 and CV2 have common points, or every points defining the base of CV1 are inside the polygonal base of CV2.",
