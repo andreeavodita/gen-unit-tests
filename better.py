@@ -1,6 +1,7 @@
 import json
 from datasets import Dataset, DatasetDict
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, Trainer, TrainingArguments
+import numpy as np
 
 def load_my_complex_data(data_file):
     with open(data_file, 'r') as f:
@@ -58,11 +59,24 @@ def predict(model, tokenizer, dataset, max_length):
     trainer = Trainer(model=model, tokenizer=tokenizer)
     predictions = trainer.predict(test_dataset=tokenized_dataset)
 
-    # Access predictions within the tuple and convert to a list of lists of token IDs
-    predictions_token_ids = predictions.predictions
+    # Access predictions within the tuple
+    logits = predictions.predictions
+
+    print(logits)
+
+    max_seq_len = max(logit.shape[0] for logit in logits)
+    padded_logits = np.zeros((len(logits), max_seq_len, logits[0].shape[-1]))
+
+    for i, logit in enumerate(logits):
+        padded_logits[i, :logit.shape[0], :] = logit
+
+    # Convert logits to token IDs by taking the argmax over the last dimension
+    token_ids = np.argmax(logits, axis=-1)
+
+    print(token_ids)
 
     # Decode the token IDs into text
-    decoded_texts = tokenizer.batch_decode(predictions_token_ids, skip_special_tokens=True)
+    decoded_texts = tokenizer.batch_decode(token_ids, skip_special_tokens=True)
 
     return decoded_texts
 
