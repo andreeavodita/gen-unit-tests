@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments,
 from trl import SFTTrainer
 
 def train():
-    train_dataset = load_dataset("tatsu-lab/alpaca", split="train")
+    train_dataset = load_dataset("openai/openai_humaneval", split="test")
 
     quantization_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -15,16 +15,15 @@ def train():
         llm_int8_enable_fp32_cpu_offload=True
     )
 
-    tokenizer = AutoTokenizer.from_pretrained("Salesforce/xgen-7b-8k-base", trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained("bigcode/starcoder", trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
-        "Salesforce/xgen-7b-8k-base",
+        "bigcode/starcoder",
         torch_dtype=torch.float16,
         device_map="auto",
-        offload_folder="./offload_folder",
+        quantization_config=quantization_config,
     )
-    model = model.half()
 
     model.resize_token_embeddings(len(tokenizer))
     model = prepare_model_for_kbit_training(model)
@@ -41,7 +40,7 @@ def train():
 
     training_args = TrainingArguments(
         output_dir="xgen-7b-tuned-alpaca-l1",
-        per_device_train_batch_size=1,
+        per_device_train_batch_size=4,
         optim="adamw_torch",
         logging_steps=100,
         learning_rate=2e-4,
