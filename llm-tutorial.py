@@ -15,14 +15,15 @@ def train():
         llm_int8_enable_fp32_cpu_offload=True
     )
 
-    tokenizer = AutoTokenizer.from_pretrained("bigcode/starcoder", trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained("Salesforce/codet5-small", trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
-        "bigcode/starcoder",
+        "Salesforce/codet5-small",
         torch_dtype=torch.float16,
         device_map="auto",
         quantization_config=quantization_config,
+        offload_folder="llm_offload",
     )
 
     model.resize_token_embeddings(len(tokenizer))
@@ -39,8 +40,9 @@ def train():
     model = get_peft_model(model, peft_config)
 
     training_args = TrainingArguments(
-        output_dir="xgen-7b-tuned-alpaca-l1",
-        per_device_train_batch_size=4,
+        output_dir="codet5-small-llm",
+        per_device_train_batch_size=2,
+        gradient_accumulation_steps=2,
         optim="adamw_torch",
         logging_steps=100,
         learning_rate=2e-4,
@@ -49,7 +51,7 @@ def train():
         lr_scheduler_type="linear",
         num_train_epochs=1,
         save_strategy="epoch",
-        # push_to_hub=True,
+        push_to_hub=True,
     )
 
     trainer = SFTTrainer(
@@ -64,7 +66,7 @@ def train():
     )
 
     trainer.train()
-    # trainer.push_to_hub()
+    trainer.push_to_hub()
 
 if __name__ == "__main__":
     train()
