@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, TrainingArguments,
 from trl import SFTTrainer
 
 def train():
-    train_dataset = load_dataset("openai/openai_humaneval", split="test")
+    train_dataset = load_dataset('json', data_files="English_text.jsonl", split='train')
 
     quantization_config = BitsAndBytesConfig(
         load_in_4bit=True,
@@ -15,11 +15,11 @@ def train():
         llm_int8_enable_fp32_cpu_offload=True
     )
 
-    tokenizer = AutoTokenizer.from_pretrained("Salesforce/codet5-small", trust_remote_code=True)
+    tokenizer = AutoTokenizer.from_pretrained("gpt2", trust_remote_code=True)
     tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
-        "Salesforce/codet5-small",
+        "gpt2",
         torch_dtype=torch.float16,
         device_map="auto",
         quantization_config=quantization_config,
@@ -40,16 +40,16 @@ def train():
     model = get_peft_model(model, peft_config)
 
     training_args = TrainingArguments(
-        output_dir="codet5-small-llm",
-        per_device_train_batch_size=2,
-        gradient_accumulation_steps=2,
+        output_dir="gpt2-tuned",
+        per_device_train_batch_size=4,
+        gradient_accumulation_steps=8,
         optim="adamw_torch",
         logging_steps=100,
         learning_rate=2e-4,
         fp16=True,
         warmup_ratio=0.1,
         lr_scheduler_type="linear",
-        num_train_epochs=1,
+        num_train_epochs=10,
         save_strategy="epoch",
         push_to_hub=True,
     )
