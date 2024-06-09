@@ -5,8 +5,8 @@ from datasets import load_dataset
 # Load the synthetic dataset
 dataset = load_dataset("jitx/Methods2Test_java_unit_test_code")
 
-dataset["train"] = dataset["train"].select(range(600))
-dataset["test"] = dataset["test"].select(range(160))
+dataset["train"] = dataset["train"].select(range(3200))
+dataset["test"] = dataset["test"].select(range(800))
 
 # Tokenize the dataset
 tokenizer = T5Tokenizer.from_pretrained("t5-small")
@@ -30,22 +30,18 @@ model.resize_token_embeddings(len(tokenizer))
 
 # Define the training arguments
 training_args = TrainingArguments(
-    output_dir='./method-test-generator-t5.1',
+    output_dir='./method-test-generator-t5.2',
     evaluation_strategy="epoch",
-    learning_rate=5e-5,
-    lr_scheduler_type="linear",
+    learning_rate=2e-4,
     weight_decay=0.01,
     per_device_train_batch_size=1,
     per_device_eval_batch_size=1,
-    gradient_accumulation_steps=2,
     num_train_epochs=3,
     save_total_limit=2,
     logging_dir='./logs',
-    logging_steps=10,
-    warmup_ratio=0.1,
+    logging_steps=20,
     remove_unused_columns=False,
     fp16=True,
-    optim="adamw_torch",
 )
 
 # Initialize the trainer
@@ -60,5 +56,5 @@ trainer = Trainer(
 trainer.train()
 
 # Save the fine-tuned model and tokenizer
-model.save_pretrained("./method-test-generator-t5.1")
-tokenizer.save_pretrained("./method-test-generator-t5.1")
+model.save_pretrained("./method-test-generator-t5.2")
+tokenizer.save_pretrained("./method-test-generator-t5.2")
