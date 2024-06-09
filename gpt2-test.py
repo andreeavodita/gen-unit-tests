@@ -1,34 +1,44 @@
 import torch
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
+from datasets import load_dataset
 
-def generate_text(model, tokenizer, prompt, max_length=512, max_new_tokens=50):
-    input_ids = tokenizer.encode(prompt, return_tensors='pt').to('cuda')
+# Load the fine-tuned model and tokenizer
+model_path = "./method-test-generator"
+model = GPT2LMHeadModel.from_pretrained(model_path)
+tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 
-    # Generate text
-    output = model.generate(input_ids, max_length=max_length, num_return_sequences=1)
+# Load the synthetic test dataset
+dataset = load_dataset("jitx/Methods2Test_java_unit_test_code")
+dataset["test"] = dataset["test"].select(range(50))
 
-    # Decode and return the generated text
-    return tokenizer.decode(output[0], skip_special_tokens=True)
+# Tokenize the test dataset
+def tokenize_function_test(examples):
+    return tokenizer(examples["src_fm"], padding="max_length", truncation=True, max_length=512)
 
-def main():
-    # Load trained model and tokenizer
-    model_name = './my-gpt2'  # Path to your trained model
-    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-    model = GPT2LMHeadModel.from_pretrained(model_name)
+tokenized_test_dataset = dataset["test"].map(tokenize_function_test, batched=True)
 
-    # Set the device to GPU if available
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-    model.to(device)
+# Generate predictions
+model.eval()  # Set model to evaluation mode
+results = []
 
-    # Example prompt
-    prompt = "prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89"
+with torch.no_grad():
+    for i, example in enumerate(tokenized_test_dataset):
+        input_ids = torch.tensor(example["input_ids"]).unsqueeze(0)  # Add batch dimension
+        attention_mask = torch.tensor(example["attention_mask"]).unsqueeze(0)  # Add batch dimension
 
-    # Generate text based on the prompt
-    generated_text = generate_text(model, tokenizer, prompt)
+        # Generate output
+        outputs = model.generate(input_ids, attention_mask=attention_mask, max_length=512)
+        generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    # Print the generated text
-    print("Generated Text:")
-    print(generated_text)
+        # Print the input and the generated output
+        original_text = tokenizer.decode(input_ids[0], skip_special_tokens=True)
+        results.append(f"Input {i}: {original_text}")
+        results.append(f"Generated Output {i}: {generated_text}")
+        results.append("-----")
 
-if __name__ == "__main__":
-    main()
+# Write results to a file
+with open("test_results.txt", "w") as f:
+    for line in results:
+        f.write(line + "\n")
+
+print("Testing complete. Results saved to 'test_results.txt'.")
