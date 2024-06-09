@@ -1,65 +1,34 @@
-import json
 import torch
-from transformers import GPT2LMHeadModel, GPT2Tokenizer, Trainer, TrainingArguments
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-# Load the dataset
-with open('English_text.jsonl') as f:
-    data = json.load(f)
+def generate_text(model, tokenizer, prompt, max_length=512, max_new_tokens=50):
+    input_ids = tokenizer.encode(prompt, return_tensors='pt').to('cuda')
 
-# Prepare the data for training
-train_texts = []
-train_labels = []
+    # Generate text
+    output = model.generate(input_ids, max_length=max_length, num_return_sequences=1)
 
-for item in data:
-    prompt = item['prompt']
-    canonical_solution = item['test']
-    if canonical_solution:
-        train_texts.append(prompt)
-        train_labels.append(canonical_solution)
+    # Decode and return the generated text
+    return tokenizer.decode(output[0], skip_special_tokens=True)
 
-# Load pretrained model and tokenizer
-model_name = 'gpt2'  # Or 'distilgpt2' for a smaller model
-tokenizer = GPT2Tokenizer.from_pretrained(model_name)
-model = GPT2LMHeadModel.from_pretrained(model_name)
+def main():
+    # Load trained model and tokenizer
+    model_name = './my-gpt2'  # Path to your trained model
+    tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+    model = GPT2LMHeadModel.from_pretrained(model_name)
 
-# Tokenize the inputs
-train_encodings = tokenizer(train_texts, truncation=True, padding=True, max_length=512)
-train_labels = tokenizer(train_labels, truncation=True, padding=True, max_length=512)['input_ids']
+    # Set the device to GPU if available
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    model.to(device)
 
-# Prepare the dataset for Trainer
-class CodeDataset(torch.utils.data.Dataset):
-    def __init__(self, encodings, labels):
-        self.encodings = encodings
-        self.labels = labels
+    # Example prompt
+    prompt = "prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    2\n    >>> prime_fib(2)\n    3\n    >>> prime_fib(3)\n    5\n    >>> prime_fib(4)\n    13\n    >>> prime_fib(5)\n    89"
 
-    def __getitem__(self, idx):
-        item = {key: torch.tensor(val[idx]) for key, val in self.encodings.items()}
-        item['labels'] = torch.tensor(self.labels[idx])
-        return item
+    # Generate text based on the prompt
+    generated_text = generate_text(model, tokenizer, prompt)
 
-    def __len__(self):
-        return len(self.labels)
+    # Print the generated text
+    print("Generated Text:")
+    print(generated_text)
 
-train_dataset = CodeDataset(train_encodings, train_labels)
-
-# Define training arguments
-training_args = TrainingArguments(
-    output_dir='./my-gpt2',
-    num_train_epochs=3,
-    per_device_train_batch_size=2,
-    per_device_eval_batch_size=2,
-    warmup_steps=500,
-    weight_decay=0.01,
-    logging_dir='./logs',
-    logging_steps=10,
-)
-
-# Create Trainer
-trainer = Trainer(
-    model=model,
-    args=training_args,
-    train_dataset=train_dataset,
-)
-
-# Train the model
-trainer.train()
+if __name__ == "__main__":
+    main()
