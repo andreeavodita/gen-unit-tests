@@ -5,14 +5,14 @@ from datasets import load_dataset
 # Load the synthetic dataset
 dataset = load_dataset("jitx/Methods2Test_java_unit_test_code")
 
-dataset["train"] = dataset["train"].select(range(3200))
-dataset["test"] = dataset["test"].select(range(800))
+dataset["train"] = dataset["train"].select(range(5000))
+dataset["test"] = dataset["test"].select(range(1000))
 
 # Tokenize the dataset
 tokenizer = T5Tokenizer.from_pretrained("t5-small")
 
 def tokenize_function(examples):
-    src_text = examples["src_fm"]
+    src_text = examples["src_fm_fc_ms_ff"]
     target_text = examples["target"]
     inputs = tokenizer(src_text, return_tensors="pt", padding=True, truncation=True, max_length=1024)
     labels = tokenizer(target_text, return_tensors="pt", padding=True, truncation=True, max_length=1024)
