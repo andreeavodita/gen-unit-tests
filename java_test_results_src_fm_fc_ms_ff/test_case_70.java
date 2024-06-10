@@ -1,0 +1,5 @@
+/*
+DefaultScriptHandler implements ScriptHandler  @Override public Object runScript(ScriptFragment scriptFragment)  ScriptRunner process = get(scriptFragment); if (process == null)  throw new IllegalArgumentException("can not find ScriptRunner for " + scriptFragment.toScriptString());  return process.run(scriptFragment);  DefaultScriptHandler(); @Override Object runScript(ScriptFragment scriptFragment); @Override void register(ScriptRunnerModule scriptRunnerModule); @Override void register(ScriptRunner scriptRunner); ScriptRunner get(ScriptFragment scriptFragment);
+*/
+
+@Test public void testRateScript() throws Exception  DefaultScriptHandler scriptFragment = new DefaultScriptHandler(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); scriptFragment.toScriptString(); DefaultScriptHandler DefaultScriptHandler.runScript(scriptFragment);

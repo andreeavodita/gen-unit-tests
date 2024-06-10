@@ -1,0 +1,5 @@
+/*
+@Override public Object convert(FixtureTemplate fixtureTemplate, TypeToken typeToken)  if (typeToken.getRawType()!= Optional.class)  return fixtureConverter.convert(fixtureTemplate, typeToken);  ListTypeToken?>> types = TypeTokenUtils.extractGenericTypeTokens(typeToken); if (types.isEmpty())  if (fixtureTemplate instanceof FixtureValue)  Object value = ((FixtureValue) fixtureTemplate).getValue(); return Optional.of(value);  return null;  else  return Optional.of(fixtureConverter.convert(fixtureTemplate, types.get(0)));
+*/
+
+@Test public void testConvertFilter() throws Exception  String r = """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

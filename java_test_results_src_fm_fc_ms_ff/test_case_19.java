@@ -1,0 +1,5 @@
+/*
+JarUtil  public static long getResourceSize(Path file, String resource) throws IOException  checkNotNull(resource); checkNotNull(file); URL url = getResourceUrl(file, resource); if (url == null) throw new IOException(); return Resources.asByteSource(url).size();  private JarUtil(); static OptionalString> getManifestValue(Path file, String attribute); static OptionalString> getManifestValue(File file, String attribute); static Attributes getManifest(Path file); static Attributes getManifest(File file); static long getResourceSize(Path file, String resource); static long getResourceSize(File file, String resource); static URL getResourceUrl(Path file, String resource); static boolean resourceExists(Path file, String resource);
+*/
+
+@Test public void testGetResourceSize() throws IOException  file.add("file", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "resource", "");

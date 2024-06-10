@@ -1,0 +1,5 @@
+/*
+@SuppressWarnings("unchecked") public static FixtureMap wrap(MapString,? extends Object> source, String fixtureName, FixtureTemplate parent)  FixtureMap fixtureMap = new FixtureMap(); fixtureMap.setFixtureName(fixtureName); fixtureMap.setParent(parent); for (Map.EntryString,? extends Object> entry : source.entrySet())  String key = entry.getKey(); if (entry.getValue() instanceof Map)  fixtureMap.put(entry.getKey(), wrap((Map) entry.getValue(), key, fixtureMap));  else if (entry.getValue() instanceof List)  fixtureMap.put(entry.getKey(), wrap((List) entry.getValue(), key, fixtureMap));  else  FixtureValue wrapped = wrap(entry.getValue(), entry.getKey(), fixtureMap); fixtureMap.put(entry.getKey(), wrapped);   return fixtureMap;
+*/
+
+@SuppressWarnings("unchecked") public void testFilterFilterFilter() throws Exception  FixtureMap fixtureMap = new FixtureMap("unchecked"); FixtureMap wrap("unchecked");

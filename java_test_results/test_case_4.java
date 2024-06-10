@@ -1,0 +1,5 @@
+/*
+void handshake(Channel channel, InstanceType instance, InstanceFlavor flavor, String uuid)  log.debug("Initiating CVID handshake"); channel.writeAndFlush( MsgUtil.rq(RQ_Cvid.newBuilder().setInstance(instance).setInstanceFlavor(flavor).setUuid(uuid)).build());
+*/
+
+@Test void testInstanceFlavor()  InstanceType instance  InstanceType instance  InstanceType instance  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceType  InstanceFlush(instanceFlavor_instance_instance_null_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Cvid_Factory, InstanceFlavor flavor, String uuid)

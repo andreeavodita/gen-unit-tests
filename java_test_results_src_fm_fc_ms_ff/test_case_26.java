@@ -1,0 +1,5 @@
+/*
+NetUtil  public static boolean checkPort(String host, int port)  if (!DomainValidator.getInstance().isValid(host) &&!InetAddressValidator.getInstance().isValid(host)) throw new IllegalArgumentException("Invalid host: " + host); if (!ValidationUtil.port(port)) throw new IllegalArgumentException("Invalid port: " + port); try (Socket sock = new Socket())  sock.connect(new InetSocketAddress(host, port), PORTCHECK_TIMEOUT); return sock.isConnected();  catch (UnknownHostException e)  return false;  catch (IOException e)  return false;   private NetUtil(); static boolean checkPort(String host, int port); static byte[] download(String url); static void download(String url, File file); static byte[] download(URL url); static void download(URL url, File file); static OptionalString> serviceName(int port);
+*/
+
+@Test public void testCheckPort() throws Exception  NetUtil.checkPort("host", port); assertFalse(checkPort, NetUtil.checkPort("host", port);

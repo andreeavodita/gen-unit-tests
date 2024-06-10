@@ -1,0 +1,5 @@
+/*
+ScriptFragment  public static boolean isScript(FixtureValue fixtureValue)  return (fixtureValue.getValue() instanceof String) && FIXTURE_VALUE_SCRIPT_PATTERN.matcher((CharSequence) fixtureValue.getValue()).find();  ScriptFragment(String methodName); ScriptFragment(String methodName, String... arguments); static ScriptFragment of(FixtureValue fixtureValue); static ScriptFragment of(String script); static boolean isScript(FixtureValue fixtureValue); String getMethodName(); ListString> getArguments(); boolean hasArguments(); ScriptFragment getNext(); void appendToTail(ScriptFragment scriptFragment); String toScriptString();
+*/
+
+@Test public void testIsScript()  boolean isScript(matcherValue); String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo"; String m = "foo";

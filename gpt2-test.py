@@ -9,7 +9,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 
 # Load the synthetic test dataset
 dataset = load_dataset("jitx/Methods2Test_java_unit_test_code")
-dataset["test"] = dataset["test"].select(range(50))
+dataset["test"] = dataset["test"].select(range(10))
 
 # Tokenize the test dataset
 def tokenize_function_test(examples):
@@ -27,7 +27,7 @@ with torch.no_grad():
         attention_mask = torch.tensor(example["attention_mask"]).unsqueeze(0)  # Add batch dimension
 
         # Generate output
-        outputs = model.generate(input_ids, attention_mask=attention_mask, max_length=512)
+        outputs = model.generate(input_ids, attention_mask=attention_mask, max_length=1024)
         generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
         # Print the input and the generated output

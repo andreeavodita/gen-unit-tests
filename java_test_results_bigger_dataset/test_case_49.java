@@ -1,0 +1,5 @@
+/*
+@Handler(auth = false) public static MessageOrBuilder rq_ping(RQ_Ping rq)  return RS_Ping.newBuilder();
+*/
+
+@Handler(auth = false) public MessageOrBuilder rq_ping(rq_ping(rq_ping(rq_ping(rq_ping(rq_ping))  public MessageOrBuilder rq_ping(rq_ping(rq_ping))  public MessageOrBuilder rq_ping(rq_ping(rq_ping))  public MessageOrBuilder rq_ping(rq_ping(rq)); MessageOrBuilder rq_ping(rq)); MessageOrBuilder rq_ping(rq)); MessageOrBuilder rq_ping(rq)  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq_ping(rq))  public MessageOrBuilder rq_ping(rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq_ping(rq))  public MessageOrBuilder rq

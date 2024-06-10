@@ -1,0 +1,5 @@
+/*
+@Override public boolean canHandle(Object source, TypeToken?> typeToken)  return sourceTypeToken.getRawType().equals(source.getClass()) && this.targetTypeToken.equals(typeToken);
+*/
+
+@Test public void canHandleHandle() throws Exception  sourceTypeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?> typeToken?>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

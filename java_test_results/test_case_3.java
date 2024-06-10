@@ -1,0 +1,5 @@
+/*
+public static OptionalInteger> getPort(String server) throws InterruptedException, ExecutionException  Objects.requireNonNull(server); DnsQuestion question = new DefaultDnsQuestion(server, DnsRecordType.SRV); DnsResponse response = RESOLVER.query(question).get().content(); DnsRawRecord record = response.recordAt(DnsSection.ANSWER); if (record == null) return Optional.empty(); ByteBuf buffer = record.content(); buffer.readShort(); buffer.readShort(); int port = buffer.readShort(); if (!ValidationUtil.port(port)) return Optional.empty(); return Optional.of(port);
+*/
+
+@Test public void getPort(server, DnsRecordType.SRV).getPort(server) throws InterrupteException, ExecutionException  Objects.requireNonNull(server); DnsQuestion question = new DefaultDnsQuestion(interruptedException, ExecutionException.requireNonNull(server, DnsRecordType.SRV); assertEquals(interruptedException, Exception.readShort());

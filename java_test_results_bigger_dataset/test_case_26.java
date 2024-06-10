@@ -1,0 +1,5 @@
+/*
+public static boolean checkPort(String host, int port)  if (!DomainValidator.getInstance().isValid(host) &&!InetAddressValidator.getInstance().isValid(host)) throw new IllegalArgumentException("Invalid host: " + host); if (!ValidationUtil.port(port)) throw new IllegalArgumentException("Invalid port: " + port); try (Socket sock = new Socket())  sock.connect(new InetSocketAddress(host, port), PORTCHECK_TIMEOUT); return sock.isConnected();  catch (UnknownHostException e)  return false;  catch (IOException e)  return false;
+*/
+
+@Test public void testCheckPort("host", int port, int port);  catch (IOException e)  if (InetAddressValidator.getInstance().isValid("host", new Socket("host"));  catch (IOException e)   catch (IOException e)   catch (IOException e)   catch (IOException e)   catch (IOException e)
